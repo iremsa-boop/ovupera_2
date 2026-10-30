@@ -130,13 +130,6 @@ export const featuredIngredients = ingredients.filter((i) =>
   ["Miyo-inositol", "L-Karnitin", "L-Arjinin", "Koenzim Q10", "Resveratrol", "Alfa Lipoik Asit"].includes(i.name),
 );
 
-export const productFacts = [
-  { value: "22", label: "Bileşen" },
-  { value: "6,5 g", label: "Tek kullanımlık saşe" },
-  { value: "30", label: "Saşe / kutu" },
-  { value: "1", label: "Günde bir saşe" },
-] as const;
-
 export const usageSteps = [
   { step: "01", title: "Saşeyi açın", text: "Tek kullanımlık 6,5 g saşe." },
   { step: "02", title: "200 ml suyla karıştırın", text: "Şeftali aromalı, ferahlatıcı bir içecek." },

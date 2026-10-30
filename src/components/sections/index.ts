@@ -1,6 +1,6 @@
 export { BenefitGrid } from "./BenefitGrid";
 export { CtaBanner } from "./CtaBanner";
-export { FactsBand } from "./FactsBand";
+export { IntroStatement } from "./IntroStatement";
 export { FaqList } from "./FaqList";
 export { IngredientCard } from "./IngredientCard";
 export { IngredientTable } from "./IngredientTable";

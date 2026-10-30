@@ -5,7 +5,7 @@ import { Button, Container, SectionHeading } from "@/components/ui";
 import {
   BenefitGrid,
   CtaBanner,
-  FactsBand,
+  IntroStatement,
   HomeHero,
   IngredientCard,
   SplitFeature,
@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
-      <FactsBand />
+      <IntroStatement />
 
       <SplitFeature
         image="/images/lifestyle-cift-sabah.jpg"
