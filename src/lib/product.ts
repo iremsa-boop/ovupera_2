@@ -127,7 +127,7 @@ export const ingredientsByGroup = (group: IngredientGroup) =>
   ingredients.filter((i) => i.group === group);
 
 export const featuredIngredients = ingredients.filter((i) =>
-  ["Miyo-inositol", "L-Karnitin", "L-Arjinin", "Koenzim Q10", "Resveratrol", "Alfa Lipoik Asit"].includes(i.name),
+  ["Miyo-inositol", "Koenzim Q10", "L-Karnitin"].includes(i.name),
 );
 
 export const usageSteps = [
@@ -136,27 +136,55 @@ export const usageSteps = [
   { step: "03", title: "Günde 1 saşe tüketin", text: "Size ait küçük bir mola." },
 ] as const;
 
-export const benefitHighlights = [
+export type BenefitIcon = "cell" | "shield" | "cycle";
+
+export const benefitHighlights: { title: string; text: string; nutrients: string; icon: BenefitIcon }[] = [
   {
     title: "Hücre bölünmesi",
-    text: "Folat, B12 vitamini, D vitamini ve çinko hücre bölünmesi sürecinde görev alır.",
-    image: "/images/hucre-bolunmesi.jpg",
+    text: "Hücre bölünmesi sürecinde görev alır.",
+    nutrients: "Folat · B12 vitamini · D vitamini · Çinko",
+    icon: "cell",
   },
   {
     title: "Bağışıklık",
-    text: "Bağışıklık sisteminin normal fonksiyonuna katkıda bulunan 7 bileşen.",
-    image: "/images/bagisiklik.jpg",
+    text: "Bağışıklık sisteminin normal fonksiyonuna katkıda bulunur.",
+    nutrients: "C · D3 · B6 · B12 vitamini · Folat · Çinko · Selenyum",
+    icon: "shield",
   },
   {
     title: "Homosistein metabolizması",
-    text: "Folat, B6 ve B12 vitamini normal homosistein metabolizmasına katkıda bulunur.",
-    image: "/images/homosistein.jpg",
+    text: "Normal homosistein metabolizmasına katkıda bulunur.",
+    nutrients: "Folat · B6 vitamini · B12 vitamini",
+    icon: "cycle",
   },
-] as const;
+];
 
 export const productionImages = [
   { src: "/images/uretim-saset-dolum.jpg", alt: "Saşe dolum hattı" },
   { src: "/images/uretim-monodoz.jpg", alt: "Monodoz paketleme hattı" },
   { src: "/images/uretim-shrink.jpg", alt: "Otomatik shrink paketleme" },
   { src: "/images/uretim-kaplama.jpg", alt: "Tablet kaplama ünitesi" },
+] as const;
+
+export const productFaq = [
+  {
+    q: "Ovupera nasıl kullanılır?",
+    a: "Günde 1 saşe, 200 ml suda karıştırılarak tüketilir. Tavsiye edilen günlük porsiyonu aşmayınız.",
+  },
+  {
+    q: "Bir kutu kaç gün yeter?",
+    a: "Her kutuda 30 saşe bulunur; günde bir saşe ile bir kutu 30 günlük kullanım içindir.",
+  },
+  {
+    q: "Tadı nasıl?",
+    a: "Ovupera şeftali aromalıdır. Suyla karıştırıldığında hafif, meyveli bir içecek elde edilir.",
+  },
+  {
+    q: "Hamilelik ya da emzirme döneminde kullanılabilir mi?",
+    a: "Hamilelik, emzirme döneminde ve sürekli ilaç kullanıyorsanız kullanmadan önce doktorunuza danışmanız önerilir.",
+  },
+  {
+    q: "Ovupera bir ilaç mı?",
+    a: "Hayır. Ovupera takviye edici gıdadır; hastalıkların önlenmesi veya tedavi edilmesi amacıyla kullanılmaz ve normal beslenmenin yerine geçmez.",
+  },
 ] as const;

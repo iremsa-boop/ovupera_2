@@ -3,12 +3,10 @@ import { featuredIngredients } from "@/lib/product";
 import { PostTeaserGrid } from "@/components/blog/PostTeaser";
 import { Button, Container, SectionHeading } from "@/components/ui";
 import {
-  BenefitGrid,
   CtaBanner,
-  IntroStatement,
   HomeHero,
   IngredientCard,
-  SplitFeature,
+  IntroStatement,
   Testimonials,
   UsageSteps,
 } from "@/components/sections";
@@ -21,50 +19,26 @@ export default function HomePage() {
       <HomeHero />
       <IntroStatement />
 
-      <SplitFeature
-        image="/images/lifestyle-cift-sabah.jpg"
-        imageAlt="Gebelik planlayan bir çift kahvaltıda"
-        eyebrow="Gebelik planlarken"
-        title={
-          <>
-            Her sabah, aynı hayale <em className="text-plum-700">birlikte uyanmak.</em>
-          </>
-        }
-      >
-        <p>
-          Annelik yolculuğu 35 yaş ve sonrasında yeni bir anlam kazanıyor. Zaman ilerledikçe hücresel seviyedeki
-          enerji ihtiyacı ve antioksidan desteği gereksinimi artıyor.
-        </p>
-        <p>
-          Ovupera; aşılama ve tüp bebek (IVF) süreçleri öncesinde bedeninizin doğal potansiyelini desteklemek için,
-          hekimlerin bilimsel güveniyle geliştirildi.
-        </p>
-        <Button href="/hakkimizda" variant="outline">
-          Hakkımızda
-        </Button>
-      </SplitFeature>
-
-      <section className="py-20 sm:py-24">
+      <section className="bg-blush-50 py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Formülün merkezinde"
             title="Her biri ölçülü, her biri bilinçli."
             intro="Yumurta hücresinin ihtiyaç duyduğu biyolojik enerji ve koruma için özenle seçilmiş özel bileşenler."
           />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             {featuredIngredients.map((i) => (
               <IngredientCard key={i.name} ingredient={i} />
             ))}
           </div>
           <div className="mt-10 text-center">
             <Button href="/bilesenler" variant="outline">
-              Tüm bileşenleri görün
+              22 bileşenin tamamını görün
             </Button>
           </div>
         </Container>
       </section>
 
-      <BenefitGrid />
       <UsageSteps />
       <Testimonials />
 

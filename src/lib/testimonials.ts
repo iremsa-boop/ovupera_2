@@ -52,3 +52,6 @@ export const testimonials: Testimonial[] = [
     sample: true,
   },
 ];
+
+/** Sitede gösterilen yorumlar: örnek (sample) olanlar yayında görünmez */
+export const publishedTestimonials = testimonials.filter((t) => !t.sample);

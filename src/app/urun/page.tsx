@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
 import { Img } from "@/components/ui/Img";
 import { Card, Container, Pill, SectionHeading } from "@/components/ui";
-import { BenefitGrid, CtaBanner, IngredientTable, PageHero, UsageSteps } from "@/components/sections";
+import { companyFacts, productDisclaimer } from "@/lib/site";
+import { productFaq } from "@/lib/product";
+import { BenefitGrid, CtaBanner, FaqAccordion, IngredientTable, PageHero, UsageSteps } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Ürün",
   description: "Ovupera: 22 bileşen, tek saşe. Günde bir saşe, 200 ml suyla, şeftali aromalı.",
 };
 
-const specs = [
+const specs: (readonly [string, string])[] = [
   ["Form", "Toz saşe, 6,5 g"],
   ["Ambalaj", "30 saşe / kutu"],
   ["Aroma", "Şeftali"],
   ["Kullanım", "Günde 1 saşe, 200 ml suyla"],
   ["Ürün tipi", "Takviye edici gıda"],
-] as const;
+  // Üretici ve kayıt bilgileri site.ts'de doldurulunca burada da görünür
+  ...companyFacts.map((f) => [f.label, f.value] as const),
+];
 
 export default function ProductPage() {
   return (
@@ -31,8 +35,15 @@ export default function ProductPage() {
 
       <section className="pb-20">
         <Container className="grid items-center gap-12 md:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-            <Img src="/images/kutu.jpg" alt="Ovupera kutusu" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <div className="relative aspect-[10/7] overflow-hidden rounded-[2rem]">
+            <Img
+              src="/images/kutu-saset.jpg"
+              alt="Ovupera kutusu ve saşeleri"
+              fill
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
           <div>
             <h2 className="font-serif text-4xl text-plum-900">Ovupera</h2>
@@ -81,6 +92,19 @@ export default function ProductPage() {
 
       <UsageSteps />
       <BenefitGrid />
+
+      <section className="py-20 sm:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading eyebrow="Merak edilenler" title="Sık sorulan sorular" />
+            <div className="mt-12">
+              <FaqAccordion items={productFaq} />
+            </div>
+            <p className="mt-10 text-xs leading-relaxed text-muted">{productDisclaimer}</p>
+          </div>
+        </Container>
+      </section>
+
       <CtaBanner />
     </>
   );

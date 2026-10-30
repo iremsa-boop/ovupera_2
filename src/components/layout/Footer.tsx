@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerColumns, site, socialLinks } from "@/lib/site";
+import { companyFacts, footerColumns, site, socialLinks } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
@@ -30,6 +30,16 @@ export function Footer() {
                 </a>
               </p>
             </address>
+            {companyFacts.length > 0 && (
+              <dl className="mt-8 space-y-1 text-sm text-blush-300/80">
+                {companyFacts.map((f) => (
+                  <div key={f.label}>
+                    <dt className="inline">{f.label}: </dt>
+                    <dd className="inline">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
           </div>
 
           {footerColumns.map((col) => (
