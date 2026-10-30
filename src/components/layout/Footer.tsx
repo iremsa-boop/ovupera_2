@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { disclaimer, footerColumns, site, socialLinks } from "@/lib/site";
+import { footerColumns, site, socialLinks } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
@@ -61,9 +61,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-16 max-w-4xl text-xs leading-relaxed text-blush-300/80">{disclaimer}</p>
-
-        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-blush-300/80 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-blush-300/80 sm:flex-row sm:items-center sm:justify-between">
           <p>
             Copyright © {new Date().getFullYear()} - {site.name}. Tüm hakları saklıdır.
           </p>

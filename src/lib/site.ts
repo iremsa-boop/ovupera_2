@@ -54,6 +54,3 @@ export const navigation = [
   { href: "/blog", label: "Blog" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;
-
-export const disclaimer =
-  "Takviye edici gıdadır, ilaç değildir; hastalıkların önlenmesi veya tedavi edilmesi amacıyla kullanılmaz. Takviye edici gıdalar normal beslenmenin yerine geçemez. Dengeli ve çeşitli beslenme ile sağlıklı yaşam tarzı önemlidir. Tavsiye edilen günlük porsiyonu aşmayınız. Hamilelik, emzirme döneminde ve sürekli ilaç kullananların doktora danışması önerilir.";
