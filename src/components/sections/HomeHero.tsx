@@ -27,13 +27,7 @@ export function HomeHero() {
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-plum-950/50 to-transparent" />
 
       <Container className="relative flex flex-col justify-end pb-14 pt-32 md:pb-20">
-        <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-md">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-            <path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.3l5-.7z" />
-          </svg>
-          Hekim önerili formül
-        </span>
-        <h1 className="mt-6 max-w-2xl font-serif text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+        <h1 className="max-w-2xl font-serif text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
           Zamanı değil, <em className="text-blush-300">gücü</em> yönetmek.
         </h1>
         <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/80">
