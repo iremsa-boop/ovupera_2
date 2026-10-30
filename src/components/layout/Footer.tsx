@@ -1,51 +1,76 @@
 import Link from "next/link";
-import { disclaimer, navigation, site } from "@/lib/site";
+import { disclaimer, footerColumns, site, socialLinks } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
+const heading = "font-serif text-lg text-white";
+const link = "text-blush-200 transition-colors hover:text-white";
+
 export function Footer() {
+  const { email, phone, address } = site.contact;
+
   return (
-    <footer className="bg-plum-950 text-blush-200">
-      <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="bg-plum-900 text-blush-200">
+      <Container className="pb-10 pt-16">
+        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
-            <Logo light />
-            <p className="mt-5 max-w-sm font-serif text-lg italic leading-relaxed text-blush-100">
-              {site.tagline}.
-            </p>
+            <Logo light className="text-2xl" />
+            <address className="mt-10 space-y-3 not-italic">
+              {address && <p>{address}</p>}
+              {phone && (
+                <p>
+                  <a href={`tel:${phone.replace(/\s/g, "")}`} className={link}>
+                    {phone}
+                  </a>
+                </p>
+              )}
+              <p>
+                <a href={`mailto:${email}`} className={link}>
+                  {email}
+                </a>
+              </p>
+            </address>
           </div>
+
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <p className={heading}>{col.title}</p>
+              <ul className="mt-6 space-y-3">
+                {col.links.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className={link}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-accent-400">Sayfalar</p>
-            <ul className="mt-5 space-y-3 text-sm">
-              {navigation.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
-                    {item.label}
-                  </Link>
+            <p className={heading}>Sosyal Medya</p>
+            <ul className="mt-6 space-y-3">
+              {socialLinks.map((s) => (
+                <li key={s.label}>
+                  <a href={s.href} target="_blank" rel="noreferrer" className={link}>
+                    {s.label}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-accent-400">İletişim</p>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <a href={`mailto:${site.contact.email}`} className="hover:text-white">
-                  {site.contact.email}
-                </a>
-              </li>
-              <li>
-                <a href={site.social.instagram} target="_blank" rel="noreferrer" className="hover:text-white">
-                  Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-        <p className="mx-auto mt-14 max-w-3xl border-t border-white/10 pt-8 text-center text-xs leading-relaxed text-blush-300/80">{disclaimer}</p>
-        <p className="mt-6 text-center text-xs text-blush-300/60">
-          © {new Date().getFullYear()} {site.name}. Tüm hakları saklıdır.
-        </p>
+
+        <p className="mt-16 max-w-4xl text-xs leading-relaxed text-blush-300/80">{disclaimer}</p>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-blush-300/80 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            Copyright © {new Date().getFullYear()} - {site.name}. Tüm hakları saklıdır.
+          </p>
+          <a href={site.url} className={link}>
+            www.ovupera.com
+          </a>
+        </div>
       </Container>
     </footer>
   );

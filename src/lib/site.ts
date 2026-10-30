@@ -7,19 +7,51 @@ export const site = {
   // TODO: gerçek iletişim bilgileriyle değiştirin
   contact: {
     email: "info@ovupera.com",
-    phone: "",
-    address: "",
+    phone: "" as string,
+    address: "" as string,
   },
+  // Boş bırakılan hesaplar footer'da gösterilmez
   social: {
     instagram: "https://www.instagram.com/ovupera",
+    facebook: "" as string,
+    youtube: "" as string,
+    linkedin: "" as string,
   },
 } as const;
+
+export const socialLinks = [
+  { label: "Instagram", href: site.social.instagram },
+  { label: "Facebook", href: site.social.facebook },
+  { label: "YouTube", href: site.social.youtube },
+  { label: "LinkedIn", href: site.social.linkedin },
+].filter((s) => s.href);
+
+export const footerColumns = [
+  {
+    title: "Hızlı Bağlantılar",
+    links: [
+      { href: "/", label: "Ana Sayfa" },
+      { href: "/hakkimizda", label: "Hakkımızda" },
+      { href: "/blog", label: "Blog" },
+      { href: "/sss", label: "SSS" },
+      { href: "/iletisim", label: "İletişim" },
+    ],
+  },
+  {
+    title: "Ovupera",
+    links: [
+      { href: "/urun", label: "Ürün" },
+      { href: "/bilesenler", label: "Bileşenler" },
+      { href: "/urun#kullanim", label: "Kullanım" },
+      { href: "/yorumlar", label: "Kullanıcı Yorumları" },
+    ],
+  },
+] as const;
 
 export const navigation = [
   { href: "/urun", label: "Ürün" },
   { href: "/bilesenler", label: "Bileşenler" },
   { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/yorumlar", label: "Yorumlar" },
   { href: "/blog", label: "Blog" },
   { href: "/sss", label: "SSS" },
   { href: "/iletisim", label: "İletişim" },

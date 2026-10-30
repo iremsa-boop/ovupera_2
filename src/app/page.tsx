@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <BenefitGrid />
       <UsageSteps />
-      <Testimonials limit={3} />
+      <Testimonials />
 
       {posts.length > 0 && (
         <section className="border-t border-blush-200 py-20 sm:py-24">

@@ -5,7 +5,7 @@ export type Testimonial = {
   text: string;
   rating: 1 | 2 | 3 | 4 | 5;
   date: string;
-  /** true iken kartta "Örnek yorum" etiketi görünür. Gerçek yorumlar gelince kaldırın. */
+  /** Yer tutucu metin; yayına almadan önce gerçek, izinli bir yorumla değiştirilmeli. Sitede görünmez. */
   sample?: boolean;
 };
 
@@ -33,6 +33,22 @@ export const testimonials: Testimonial[] = [
     text: "Kutunun ve saşenin tasarımı çok şık. Çantamda taşıyıp ofiste de rahatlıkla kullanabiliyorum.",
     rating: 4,
     date: "2026-10-05",
+    sample: true,
+  },
+  {
+    name: "Merve T.",
+    meta: "Bursa",
+    text: "Günde tek saşe olması ve hazırlamasının bir dakika sürmesi en sevdiğim yanı. Kutudaki bilgiler de çok açık ve anlaşılır.",
+    rating: 5,
+    date: "2026-09-28",
+    sample: true,
+  },
+  {
+    name: "Selin Y.",
+    meta: "Antalya",
+    text: "Bileşen listesini ve miktarları web sitesinden detaylıca inceleyebilmek güven verdi. Hekimime de rahatça gösterebildim.",
+    rating: 5,
+    date: "2026-09-20",
     sample: true,
   },
 ];

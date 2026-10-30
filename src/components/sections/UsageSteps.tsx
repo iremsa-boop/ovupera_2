@@ -3,7 +3,7 @@ import { Card, Container, SectionHeading } from "@/components/ui";
 
 export function UsageSteps() {
   return (
-    <section className="py-20 sm:py-24">
+    <section id="kullanim" className="scroll-mt-20 py-20 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow="Kullanım önerisi"

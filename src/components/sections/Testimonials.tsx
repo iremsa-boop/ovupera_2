@@ -1,38 +1,31 @@
-import { averageRating, testimonials } from "@/lib/testimonials";
-import { Button, Container, SectionHeading, Stars } from "@/components/ui";
+import { testimonials } from "@/lib/testimonials";
+import { Button, Container } from "@/components/ui";
 import { TestimonialCard } from "./TestimonialCard";
 
-type Props = { limit?: number; showLink?: boolean };
-
-export function Testimonials({ limit, showLink = true }: Props) {
-  const items = limit ? testimonials.slice(0, limit) : testimonials;
-  if (items.length === 0) return null;
-  const avg = averageRating();
+/** Ana sayfa yorum şeridi: yatay kaydırılan kartlar, sağda "tüm yorumlar" butonu */
+export function Testimonials() {
+  if (testimonials.length === 0) return null;
 
   return (
-    <section className="bg-blush-100 py-20 sm:py-24">
+    <section className="overflow-hidden bg-blush-100/60 py-20 sm:py-24">
       <Container>
-        <SectionHeading eyebrow="Kullanıcı yorumları" title="Yolculuğu paylaşanlar" />
-        <div className="mt-5 flex items-center justify-center gap-3 text-sm text-muted">
-          <Stars rating={avg} />
-          <span>
-            {avg.toFixed(1)} / 5 · {testimonials.length} yorum
-          </span>
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <h2 className="font-serif text-4xl leading-tight text-plum-900 sm:text-5xl">Yolculuğu paylaşanlar</h2>
+          <Button href="/yorumlar" variant="outline" className="rounded-xl bg-white">
+            Tüm yorumlar
+          </Button>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {items.map((t) => (
-            <TestimonialCard key={`${t.name}-${t.date}`} testimonial={t} />
-          ))}
-        </div>
-        {showLink && (
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Button href="/yorumlar" variant="outline">
-              Tüm yorumlar
-            </Button>
-            <Button href="/yorumlar#yorum-yaz">Yorum yazın</Button>
-          </div>
-        )}
       </Container>
+      {/* Kartlar container hizasında başlar, sağa doğru sayfa kenarına kadar taşar */}
+      <div className="mt-12 flex snap-x snap-mandatory scroll-px-[var(--gutter)] gap-5 overflow-x-auto px-[var(--gutter)] pb-4 [--gutter:1.25rem] [scrollbar-width:none] sm:[--gutter:2rem] xl:[--gutter:max(2rem,calc((100%-72rem)/2+2rem))]">
+        {testimonials.map((t) => (
+          <TestimonialCard
+            key={`${t.name}-${t.date}`}
+            testimonial={t}
+            className="w-[85%] shrink-0 snap-start sm:w-[420px] lg:w-[460px]"
+          />
+        ))}
+      </div>
     </section>
   );
 }
