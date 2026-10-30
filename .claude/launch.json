@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "ovupera-web", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--prefix", "/Users/iremsallakci/Projects/ovupera-web", "--", "-p", "3010"], "port": 3010 }
+  ]
+}

@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-plum-950: #2a0a20;
+  --color-plum-900: #4a1238;
+  --color-plum-800: #5e1847;
+  --color-plum-700: #741f58;
+  --color-plum-600: #8c2f6c;
+  --color-plum-500: #a64d87;
+  --color-blush-50: #fcf7fa;
+  --color-blush-100: #f7ecf2;
+  --color-blush-200: #efdbe7;
+  --color-blush-300: #e2c2d5;
+  --color-gold-400: #c4a27a;
+  --color-gold-500: #b08a5e;
+  --color-ink: #2b1a26;
+  --color-muted: #6b5764;
 }
 
+/* next/font değişkenleri body üzerinde tanımlı; inline ile doğrudan kullanılır */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-lora);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-blush-50);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-plum-700);
+  color: white;
+}
+
+/* Blog yazısı gövdesi */
+.prose-ovupera {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--color-ink);
+}
+.prose-ovupera > * + * {
+  margin-top: 1.25em;
+}
+.prose-ovupera h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: var(--color-plum-800);
+  margin-top: 2em;
+}
+.prose-ovupera h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-plum-800);
+  margin-top: 1.6em;
+}
+.prose-ovupera ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+}
+.prose-ovupera ul li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  font-size: 0.6em;
+  top: 0.75em;
+  color: var(--color-gold-500);
+}
+.prose-ovupera strong {
+  color: var(--color-plum-800);
+}
+.prose-ovupera blockquote {
+  border-left: 2px solid var(--color-gold-400);
+  padding-left: 1.25em;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-plum-700);
+}
+.prose-ovupera a {
+  color: var(--color-plum-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
