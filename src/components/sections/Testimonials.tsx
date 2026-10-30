@@ -1,20 +1,15 @@
 import { testimonials } from "@/lib/testimonials";
-import { Button, Container } from "@/components/ui";
+import { Container } from "@/components/ui";
 import { TestimonialCard } from "./TestimonialCard";
 
-/** Ana sayfa yorum şeridi: yatay kaydırılan kartlar, sağda "tüm yorumlar" butonu */
+/** Ana sayfa yorum şeridi: yatay kaydırılan kartlar */
 export function Testimonials() {
   if (testimonials.length === 0) return null;
 
   return (
     <section className="overflow-hidden bg-blush-100/60 py-20 sm:py-24">
       <Container>
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 className="font-serif text-4xl leading-tight text-plum-900 sm:text-5xl">Yolculuğu paylaşanlar</h2>
-          <Button href="/yorumlar" variant="outline" className="rounded-xl bg-white">
-            Tüm yorumlar
-          </Button>
-        </div>
+        <h2 className="font-serif text-4xl leading-tight text-plum-900 sm:text-5xl">Yolculuğu paylaşanlar</h2>
       </Container>
       {/* Kartlar container hizasında başlar, sağa doğru sayfa kenarına kadar taşar */}
       <div className="mt-12 flex snap-x snap-mandatory scroll-px-[var(--gutter)] gap-5 overflow-x-auto px-[var(--gutter)] pb-4 [--gutter:1.25rem] [scrollbar-width:none] sm:[--gutter:2rem] xl:[--gutter:max(2rem,calc((100%-72rem)/2+2rem))]">

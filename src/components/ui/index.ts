@@ -5,3 +5,4 @@ export { Eyebrow } from "./Eyebrow";
 export { Pill } from "./Pill";
 export { SectionHeading } from "./SectionHeading";
 export { Stars } from "./Stars";
+export { Img } from "./Img";

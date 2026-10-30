@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { Card, Container, Pill, SectionHeading } from "@/components/ui";
 import { BenefitGrid, CtaBanner, IngredientTable, PageHero, UsageSteps } from "@/components/sections";
 
@@ -32,7 +32,7 @@ export default function ProductPage() {
       <section className="pb-20">
         <Container className="grid items-center gap-12 md:grid-cols-2">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-            <Image src="/images/kutu.jpg" alt="Ovupera kutusu" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+            <Img src="/images/kutu.jpg" alt="Ovupera kutusu" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
           </div>
           <div>
             <h2 className="font-serif text-4xl text-plum-900">Ovupera</h2>

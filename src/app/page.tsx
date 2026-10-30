@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/lib/blog";
 import { featuredIngredients } from "@/lib/product";
-import { PostGrid } from "@/components/blog/PostGrid";
+import { PostTeaserGrid } from "@/components/blog/PostTeaser";
 import { Button, Container, SectionHeading } from "@/components/ui";
 import {
   BenefitGrid,
@@ -78,7 +78,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="mt-12">
-              <PostGrid posts={posts} />
+              <PostTeaserGrid posts={posts} />
             </div>
           </Container>
         </section>

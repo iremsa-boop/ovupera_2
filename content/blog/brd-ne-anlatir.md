@@ -2,7 +2,8 @@
 title: "%BRD ne anlatır? Takviye etiketini okuma rehberi"
 excerpt: "Etiketteki %BRD değerinin ne anlama geldiğini ve nasıl hesaplandığını bir örnekle açıklıyoruz."
 date: "2026-10-21"
-cover: "/images/brd.jpg"
+cover: "/images/kutu-arka.jpg"
+thumb: "/images/brd.jpg"
 category: "Rehber"
 ---
 

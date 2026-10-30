@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { Button, Container } from "@/components/ui";
 
 const chipImages = [
@@ -13,7 +13,7 @@ export function HomeHero() {
   return (
     <section className="relative -mt-16 flex min-h-[680px] overflow-hidden bg-plum-950 md:h-[92vh] md:max-h-[920px]">
       <div className="absolute inset-0 md:left-auto md:w-[72%]">
-        <Image
+        <Img
           src="/images/hero-cift.jpg"
           alt="Gebelik planlayan, koltukta birbirine gülümseyen bir çift"
           fill
@@ -47,7 +47,7 @@ export function HomeHero() {
           <div className="flex -space-x-3">
             {chipImages.map((src) => (
               <span key={src} className="relative size-11 overflow-hidden rounded-full ring-2 ring-white/70">
-                <Image src={src} alt="" fill sizes="44px" className="object-cover object-[50%_45%] scale-[1.8]" />
+                <Img src={src} alt="" fill priority sizes="44px" className="object-cover object-[50%_45%] scale-[1.8]" />
               </span>
             ))}
           </div>

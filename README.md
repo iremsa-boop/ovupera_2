@@ -4,7 +4,7 @@ Next.js 15 (App Router) + Tailwind CSS v4.
 
 ```
 src/
-  app/            Sayfalar (/, /urun, /bilesenler, /hakkimizda, /blog, /yorumlar, /iletisim)
+  app/            Sayfalar (/, /urun, /bilesenler, /hakkimizda, /blog, /iletisim)
   components/
     ui/           Temel parçalar: Button, Card, Container, Eyebrow, Ornament, Pill, SectionHeading
     layout/       Header, Footer, Logo

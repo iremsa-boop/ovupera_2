@@ -42,7 +42,6 @@ export const footerColumns = [
       { href: "/urun", label: "Ürün" },
       { href: "/bilesenler", label: "Bileşenler" },
       { href: "/urun#kullanim", label: "Kullanım" },
-      { href: "/yorumlar", label: "Kullanıcı Yorumları" },
     ],
   },
 ] as const;

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { cn } from "@/lib/utils";
 import { Container, SectionHeading } from "@/components/ui";
 
@@ -18,7 +18,7 @@ export function SplitFeature({ image, imageAlt, eyebrow, title, children, revers
     <section className={cn("py-20 sm:py-24", className)}>
       <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className={cn("relative aspect-[4/5] overflow-hidden rounded-[2rem]", reverse && "md:order-2")}>
-          <Image src={image} alt={imageAlt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Img src={image} alt={imageAlt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div>
           <SectionHeading eyebrow={eyebrow} title={title} align="left" />

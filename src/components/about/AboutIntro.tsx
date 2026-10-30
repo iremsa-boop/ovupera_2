@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { aboutIntro } from "@/lib/about";
 import { Container } from "@/components/ui";
 
@@ -20,19 +20,21 @@ export function AboutIntro() {
 
         <div className="mt-14 grid gap-4 md:grid-cols-[1fr_2.2fr]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:aspect-auto">
-            <Image
+            <Img
               src="/images/hakkimizda-ofis.jpg"
               alt="Ofiste Ovupera içen bir kadın"
               fill
+              priority
               sizes="(min-width: 768px) 32vw, 100vw"
               className="object-cover object-[35%_50%]"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl md:aspect-[16/10]">
-            <Image
+            <Img
               src="/images/hakkimizda-cift.jpg"
               alt="Kahvaltı masasında gülen bir çift"
               fill
+              priority
               sizes="(min-width: 768px) 66vw, 100vw"
               className="object-cover object-[50%_40%]"
             />

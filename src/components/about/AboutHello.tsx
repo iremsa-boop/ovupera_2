@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { aboutHello } from "@/lib/about";
 import { Container } from "@/components/ui";
 
@@ -7,7 +7,7 @@ export function AboutHello() {
     <section className="bg-white pb-20 sm:pb-24">
       <Container className="grid items-center gap-10 md:grid-cols-[1fr_1.1fr] md:gap-16">
         <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-          <Image
+          <Img
             src="/images/hakkimizda-kadin.jpg"
             alt="Evde şeftali aromalı Ovupera içen bir kadın"
             fill

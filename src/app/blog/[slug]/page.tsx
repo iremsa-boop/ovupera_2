@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
 import { formatDate } from "@/lib/utils";
 import { PostGrid } from "@/components/blog/PostGrid";
-import { Container, Eyebrow, SectionHeading } from "@/components/ui";
+import { Container, SectionHeading } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -35,21 +35,29 @@ export default async function PostPage({ params }: Params) {
   return (
     <>
       <article>
-        <header className="bg-gradient-to-b from-blush-100 to-blush-50">
-          <Container className="max-w-3xl py-16 text-center sm:py-20">
+        <header className="bg-gradient-to-b from-blush-100 to-white">
+          <Container className="max-w-3xl pb-12 pt-14 sm:pt-16">
             <Link href="/blog" className="text-sm text-muted hover:text-plum-700">
-              ← Blog
+              ← Tüm yazılar
             </Link>
-            <Eyebrow className="mt-8">{post.category}</Eyebrow>
-            <h1 className="mt-4 font-serif text-4xl leading-tight text-plum-900 sm:text-5xl">{post.title}</h1>
-            <p className="mt-5 text-sm text-muted">
-              {formatDate(post.date)} · {post.readingTime} dk okuma
+            <p className="mt-8 flex items-center gap-2.5 text-sm">
+              <span className="font-medium text-plum-700">{post.category}</span>
+              <span className="h-3.5 w-px bg-blush-300" aria-hidden />
+              <time dateTime={post.date} className="text-muted">
+                {formatDate(post.date)}
+              </time>
+              <span className="h-3.5 w-px bg-blush-300" aria-hidden />
+              <span className="text-muted">{post.readingTime} dk okuma</span>
             </p>
+            <h1 className="mt-4 font-sans text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
+              {post.title}
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-muted">{post.excerpt}</p>
           </Container>
         </header>
-        <Container className="max-w-3xl">
-          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[2rem]">
-            <Image src={post.cover} alt="" fill priority sizes="28rem" className="object-cover" />
+        <Container className="max-w-4xl">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-blush-200">
+            <Img src={post.cover} alt="" fill priority sizes="(min-width: 896px) 56rem, 100vw" className="object-cover" />
           </div>
           <div className="prose-ovupera mx-auto mt-14 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>

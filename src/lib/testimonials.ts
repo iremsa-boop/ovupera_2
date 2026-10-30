@@ -52,6 +52,3 @@ export const testimonials: Testimonial[] = [
     sample: true,
   },
 ];
-
-export const averageRating = () =>
-  testimonials.length ? testimonials.reduce((s, t) => s + t.rating, 0) / testimonials.length : 0;

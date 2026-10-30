@@ -1,33 +1,40 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
-import { PostGrid } from "@/components/blog/PostGrid";
+import { BlogExplorer } from "@/components/blog/BlogExplorer";
 import { Container } from "@/components/ui";
-import { CtaBanner, PageHero } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Bileşenler, etiket okuma ve gebelik planlama sürecine dair yazılar.",
+  description: "Bileşenler, etiket okuma ve gebelik planlama sürecine dair bilimsel temelli yazılar.",
 };
 
 export default function BlogPage() {
   const posts = getAllPosts();
+
   return (
     <>
-      <PageHero
-        eyebrow="Blog"
-        title={
-          <>
-            Bilgiyle güçlenen <em className="text-plum-700">yolculuk</em>
-          </>
-        }
-        intro="Bileşenler, etiket okuma ve günlük rutine dair bilimin ışığında yazılar."
-      />
-      <section className="pb-12">
-        <Container>
-          <PostGrid posts={posts} />
+      <section className="bg-gradient-to-b from-blush-100 to-white">
+        <Container className="py-20 text-center sm:py-24">
+          <h1 className="font-sans text-4xl font-semibold tracking-tight text-ink sm:text-6xl">Bilgi ve Güncellemeler</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+            Annelik yolculuğunu planlayan kadınlar için seçilmiş yazılar. Bileşenler, etiket okuma ve günlük rutine dair
+            bilimin ışığında, anlaşılır bilgiler.
+          </p>
         </Container>
       </section>
-      <CtaBanner />
+
+      <section className="bg-white pb-24 pt-12 sm:pt-16">
+        <Container>
+          <h2 className="font-sans text-3xl font-semibold tracking-tight text-ink">Tüm Yazılar</h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+            İçerikler, hekimlerin ve bilimsel kaynakların ışığında hazırlanır. Sağlığınızla ilgili kararlar için her
+            zaman doktorunuza danışın.
+          </p>
+          <div className="mt-8">
+            <BlogExplorer posts={posts} />
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

@@ -1,0 +1,23 @@
+// Otomatik üretildi: npm run images. Elle düzenlemeyin.
+export const imagePlaceholders: Record<string, { w: number; h: number; blur: string }> = {
+  "/images/bagisiklik.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoNABAAA4BaJQAAVWMB+8rIAP708EUEH2zJtzVZ560jWnn5D2x6OPwpXVqNadaLBwgAAA==" },
+  "/images/brd.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoNABAAA4BaJZwAAvrfjQzcAAD+9zp7Vfv64OcgJ1T9u3U3IF+O+DgA" },
+  "/images/folat.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoNABAAA4BaJQAAXO9C6YyAAP72D/cNyGGNkB/3P0YgPvV5yrfrMp0owFI0aQFnUTxtMJ4MQ2S2gAAA" },
+  "/images/hakkimizda-cift.jpg": { w: 1556, h: 1357, blur: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQAgCdASoQAA4AA4BaJZgCdAYsZN3I8BgAAP7KJq9tO7fn3Szcy4SqexWJWV5nScDhq8LB5655FvdIImGZTVUm+SDa6qcYCD76rqOq41isJhtqkTIGLbSJ6hj5oDpjHmWnRbpSLrBDjBByr0LEYsw0ZGYZy8AA" },
+  "/images/hakkimizda-kadin.jpg": { w: 1394, h: 1601, blur: "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQAgCdASoOABAAA4BaJagCdAYuvUmTwVsqQKAA/oonSMl/vSd+DkozOy4vyYPpSkNXOZ6IC+qW88NfzaOxdv6+t7/ig6Fvzr2THjWio0cvRqxo6AHWq267UNzhfc6yXCjxJwaK8DE6We+uVS2C0nd4VlJX2FEIPrdFKAAA" },
+  "/images/hakkimizda-ofis.jpg": { w: 1475, h: 1479, blur: "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwAgCdASoQABAAA4BaJZACdAYuRN/YZy0YVAD+yjtjuwKr1UjfUr+TbUbPZpH/dzXCvZXDgy9rZzrL1jkkHAhztVy2tZzAmS6/ixOlDp5y/IOdFzqqR2+atDR10jDNHJO5O7/vo9U62yCps1XntKOV2ZH31EuTK/+NJUAA" },
+  "/images/hero-cift.jpg": { w: 1615, h: 1358, blur: "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQAgCdASoQAA0AA4BaJZgCdAD7Zj2hi9MAAP7YZdLJH81hRp0KIzTVegTtKypV7jaJoDquwVkD7OSi76hgpYct7FSGnTvZ2LluoeQvdg9AwyJLJAEPwXC/1d3Sr2F+yj4alLkeIxQXu7pneFmgAA==" },
+  "/images/homosistein.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoNABAAA4BaJagCdAD1fEVyPK0xgAD+2Vjlrd7friLXHC1s528cTQAk0CnXN4rM+m9ojVwshhrrTU11lqCiT8UObN4wQAAA" },
+  "/images/hucre-bolunmesi.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoNABAAA4BaJbACdAEQBw5dF+AA/swoP62oKOuO3i7U6QrFlzNyA6BrpSjKC3hRehkmr864eK7IqJarJ3pf6idiIpkgAAAA" },
+  "/images/kutu-arka.jpg": { w: 2000, h: 1400, blur: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJZQAAmsiTx+ngAAA/u/X7a7Ay/X+VxYv4YcLZpMfMqsukYedVmPUkEGr7v0VEi0LJO3KUexfAAAA" },
+  "/images/kutu-saset.jpg": { w: 2000, h: 1400, blur: "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAsAA4BaJYwAApMLqtOeAAD+60gW8tp9U679VXTOxWJgH5VmgpdHPLYlb2/nxKO81OhRW6WJF3EvAAA=" },
+  "/images/kutu.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoNABAAA4BaJQAAYs10xCLztcAA/vYgv7HDCW43dLFouzodhJpkVe3tKN71M5rTk18X11Pirx+t+RRPYAZZpJFOtOtFg4QA" },
+  "/images/lifestyle-cift-sabah.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoNABAAA4BaJQBdgMXD3qcRAAD+9kUd2owjXDd0p96SJjFBFHTDdP5ljfrR2LpGnXTb7Bm3Dx2yPZxZseOkM8QKTJIckDL6C+XnZmsAAAA=" },
+  "/images/lifestyle-ofis.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoNABAAA4BaJZQAAu1/oJH9BgAAAP73Pgf9fCjTvEBT2JDMYK5EzI/1LeiKDrR2ZWg65UIFvwroYWxw083VMwW+KXE9tlehzEhoEh+rArZti2AeAAA=" },
+  "/images/lifestyle-seftali.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoNABAAA4BaJQBOgCHegJzTPdJAAAD+9kYUd7GPbWaSYdcpZB4eKOMMmJ90X2qOyLztMIDDUxnFbkHRxNuY3O7rQu+IvYAahGl3XVK8YAA=" },
+  "/images/miyo-inositol.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoNABAAA4BaJZwAAp1ZMzkfAmAA/vcg4tXdeFPRZJtGzzcypQqIqR8czWxEM/l0j5b2kKVMFHpU3aVXvyAcAA==" },
+  "/images/uretim-kaplama.jpg": { w: 1122, h: 1402, blur: "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoNABAAA4BaJQAAVUfS0EJzZAD+1wB1ov3iXfaBUiCRs01ugdGZF+tss3Xs1CgEF1/3DSvAyz9Axzjh0y5Gy40c8tyIcxQlNId/B70DHpv+kHLG3o+SNv91e8JmAAAA" },
+  "/images/uretim-monodoz.jpg": { w: 1402, h: 1122, blur: "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAA0AA4BaJYwC7AD1b/0DL55AAP7KXtixe9/OEHjmLRvBJr9UtPD2lnTkbfY91MNAk1lDM5E+Tf5CEgayjEbVD4kbkP+5W3glFXqJ0PSxuz1EQ8vycVnIqB6xEsAA" },
+  "/images/uretim-saset-dolum.jpg": { w: 1402, h: 1122, blur: "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoQAA0AA4BaJQBdgCKUeGnP6AAA/uJwt3mDQ3UZvJCnX5UBjJSyIv5XSmHuaMt5Hds+hAg9/GHVSL3h+toLGeVEsE/MsDfDjlxr/0NIJuclQax5PpFczH9tVI1s9ExOmAA=" },
+  "/images/uretim-shrink.jpg": { w: 1122, h: 1402, blur: "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoNABAAA4BaJZgC7AEN5dC31ar4AP7ogdt1GT+Fwk4s2viPrTmWIA9asT5YnW990io5JCiQcGZs2PJdMDTy5jia6mlmhJKoeL+VAlgRVOg4D0bOv5nudcCODq9+TYAA" },
+};

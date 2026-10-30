@@ -12,6 +12,8 @@ export type PostMeta = {
   excerpt: string;
   date: string;
   cover: string;
+  /** Ana sayfa blog modülündeki dikey (4:5) görsel; yoksa cover kullanılır */
+  thumb: string;
   category: string;
   readingTime: number;
 };
@@ -28,6 +30,7 @@ function readPost(file: string): Post {
     excerpt: data.excerpt,
     date: data.date,
     cover: data.cover,
+    thumb: data.thumb ?? data.cover,
     category: data.category ?? "Genel",
     readingTime: readingTime(content),
     html: marked.parse(content, { async: false }),

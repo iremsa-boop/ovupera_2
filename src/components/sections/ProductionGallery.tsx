@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Img } from "@/components/ui/Img";
 import { productionImages } from "@/lib/product";
 
 export function ProductionGallery() {
@@ -7,7 +7,7 @@ export function ProductionGallery() {
       {productionImages.map((img) => (
         <figure key={img.src} className="overflow-hidden rounded-2xl bg-white">
           <div className="relative aspect-[4/5]">
-            <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" />
+            <Img src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" />
           </div>
           <figcaption className="px-4 py-3 text-xs text-muted">{img.alt}</figcaption>
         </figure>
