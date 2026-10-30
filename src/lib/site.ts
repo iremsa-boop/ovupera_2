@@ -33,7 +33,6 @@ export const footerColumns = [
       { href: "/", label: "Ana Sayfa" },
       { href: "/hakkimizda", label: "Hakkımızda" },
       { href: "/blog", label: "Blog" },
-      { href: "/sss", label: "SSS" },
       { href: "/iletisim", label: "İletişim" },
     ],
   },
@@ -53,7 +52,6 @@ export const navigation = [
   { href: "/bilesenler", label: "Bileşenler" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/blog", label: "Blog" },
-  { href: "/sss", label: "SSS" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;
 

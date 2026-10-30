@@ -4,17 +4,16 @@ Next.js 15 (App Router) + Tailwind CSS v4.
 
 ```
 src/
-  app/            Sayfalar (/, /urun, /bilesenler, /hakkimizda, /blog, /sss, /iletisim)
+  app/            Sayfalar (/, /urun, /bilesenler, /hakkimizda, /blog, /yorumlar, /iletisim)
   components/
     ui/           Temel parçalar: Button, Card, Container, Eyebrow, Ornament, Pill, SectionHeading
     layout/       Header, Footer, Logo
-    sections/     Sayfa blokları: HomeHero, PageHero, SplitFeature, IngredientCard/Table, FaqList ...
+    sections/     Sayfa blokları: HomeHero, PageHero, SplitFeature, IngredientCard/Table, Testimonials ...
     blog/         PostCard, PostGrid
     forms/        ContactForm
   lib/            Veri ve yardımcılar (component içermez)
     site.ts       Site ayarları, menü, iletişim, yasal uyarı
     product.ts    22 bileşen, miktarlar, beyanlar, kullanım adımları
-    faq.ts        SSS
     blog.ts       content/blog/*.md okuma
     utils.ts      cn, formatDate, readingTime
 content/blog/     Blog yazıları (Markdown + frontmatter)
