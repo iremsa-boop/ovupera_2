@@ -9,3 +9,5 @@ export { ProductionGallery } from "./ProductionGallery";
 export { SplitFeature } from "./SplitFeature";
 export { UsageSteps } from "./UsageSteps";
 export { HomeHero } from "./HomeHero";
+export { TestimonialCard } from "./TestimonialCard";
+export { Testimonials } from "./Testimonials";

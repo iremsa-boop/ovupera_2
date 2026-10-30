@@ -19,6 +19,7 @@ export const navigation = [
   { href: "/urun", label: "Ürün" },
   { href: "/bilesenler", label: "Bileşenler" },
   { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/yorumlar", label: "Yorumlar" },
   { href: "/blog", label: "Blog" },
   { href: "/sss", label: "SSS" },
   { href: "/iletisim", label: "İletişim" },

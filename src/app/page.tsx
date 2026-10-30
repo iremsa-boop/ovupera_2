@@ -9,6 +9,7 @@ import {
   HomeHero,
   IngredientCard,
   SplitFeature,
+  Testimonials,
   UsageSteps,
 } from "@/components/sections";
 
@@ -65,6 +66,7 @@ export default function HomePage() {
 
       <BenefitGrid />
       <UsageSteps />
+      <Testimonials limit={3} />
 
       {posts.length > 0 && (
         <section className="border-t border-blush-200 py-20 sm:py-24">

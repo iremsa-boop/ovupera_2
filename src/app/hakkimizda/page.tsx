@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Card, Container, Ornament, SectionHeading } from "@/components/ui";
+import { Card, Container, SectionHeading } from "@/components/ui";
 import { CtaBanner, PageHero, ProductionGallery, SplitFeature } from "@/components/sections";
 
 export const metadata: Metadata = {
@@ -60,12 +60,11 @@ export default function AboutPage() {
 
       <section className="bg-plum-900 py-20 sm:py-28">
         <Container className="text-center">
-          <Ornament />
-          <blockquote className="mx-auto mt-10 max-w-3xl font-serif text-2xl italic leading-relaxed text-white sm:text-3xl">
+          <blockquote className="mx-auto max-w-3xl font-serif text-2xl italic leading-relaxed text-white sm:text-3xl">
             “Hekimlerin bilimsel güveni, kadınların ise umut dolu yolculuklarındaki en güçlü destekçisi olan Ovupera,
             yeni bir hayata atılan her adımda bedeninize ihtiyacı olan hücresel gücü geri kazandırır.”
           </blockquote>
-          <p className="mt-10 text-xs uppercase tracking-[0.3em] text-gold-400">
+          <p className="mt-10 text-xs uppercase tracking-[0.3em] text-accent-400">
             Annelik yolculuğunda bilimin ve zamanın yanınızdaki gücü
           </p>
         </Container>
@@ -110,7 +109,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {values.map((v, i) => (
               <Card key={v.title}>
-                <p className="font-serif text-3xl text-gold-500">0{i + 1}</p>
+                <p className="font-serif text-3xl text-accent-500">0{i + 1}</p>
                 <h3 className="mt-3 font-serif text-xl text-plum-900">{v.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{v.text}</p>
               </Card>

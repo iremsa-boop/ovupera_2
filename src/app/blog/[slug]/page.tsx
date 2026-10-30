@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
 import { formatDate } from "@/lib/utils";
 import { PostGrid } from "@/components/blog/PostGrid";
-import { Container, Eyebrow, Ornament, SectionHeading } from "@/components/ui";
+import { Container, Eyebrow, SectionHeading } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -45,7 +45,6 @@ export default async function PostPage({ params }: Params) {
             <p className="mt-5 text-sm text-muted">
               {formatDate(post.date)} · {post.readingTime} dk okuma
             </p>
-            <Ornament className="mt-8" />
           </Container>
         </header>
         <Container className="max-w-3xl">

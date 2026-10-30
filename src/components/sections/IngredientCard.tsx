@@ -12,13 +12,13 @@ export function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
         </p>
       )}
       <h3 className="mt-3 font-serif text-xl text-plum-950">{ingredient.name}</h3>
-      {ingredient.detail && <p className="mt-1 text-xs uppercase tracking-[0.15em] text-gold-500">{ingredient.detail}</p>}
+      {ingredient.detail && <p className="mt-1 text-xs uppercase tracking-[0.15em] text-accent-500">{ingredient.detail}</p>}
       {ingredient.brd && <p className="mt-2 text-xs tracking-widest text-muted">{ingredient.brd} BRD*</p>}
       {ingredient.claims && (
         <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted">
           {ingredient.claims.map((c) => (
             <li key={c} className="flex gap-2">
-              <span className="mt-2 size-1.5 shrink-0 rotate-45 bg-gold-500" />
+              <span className="mt-2 size-1.5 shrink-0 rotate-45 bg-accent-500" />
               {c}
             </li>
           ))}

@@ -11,8 +11,8 @@
   --color-blush-100: #f7ecf2;
   --color-blush-200: #efdbe7;
   --color-blush-300: #e2c2d5;
-  --color-gold-400: #c4a27a;
-  --color-gold-500: #b08a5e;
+  --color-accent-400: #e3b5d2;
+  --color-accent-500: #b05a92;
   --color-ink: #2b1a26;
   --color-muted: #6b5764;
 }
@@ -66,13 +66,13 @@ body {
   left: 0;
   font-size: 0.6em;
   top: 0.75em;
-  color: var(--color-gold-500);
+  color: var(--color-accent-500);
 }
 .prose-ovupera strong {
   color: var(--color-plum-800);
 }
 .prose-ovupera blockquote {
-  border-left: 2px solid var(--color-gold-400);
+  border-left: 2px solid var(--color-accent-400);
   padding-left: 1.25em;
   font-family: var(--font-serif);
   font-style: italic;
