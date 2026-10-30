@@ -8,35 +8,67 @@ import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
+const CTA_HREF = "/iletisim";
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setOpen(false), [pathname]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Ana sayfada hero fotoğrafının üzerinde şeffaf, beyaz yazılı
+  const overlay = pathname === "/" && !scrolled && !open;
+  const links = navigation.filter((n) => n.href !== CTA_HREF);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-blush-200/70 bg-blush-50/85 backdrop-blur-md">
+    <header
+      className={cn(
+        "sticky top-0 z-40 border-b transition-colors duration-300",
+        overlay ? "border-transparent bg-transparent" : "border-blush-200/70 bg-blush-50/90 backdrop-blur-md",
+      )}
+    >
       <Container className="flex h-16 items-center justify-between">
-        <Logo />
+        <Logo light={overlay} />
         <nav className="hidden items-center gap-8 md:flex" aria-label="Ana menü">
-          {navigation.map((item) => {
+          {links.map((item) => {
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm transition-colors hover:text-plum-700",
-                  active ? "text-plum-800 font-medium" : "text-muted",
+                  "text-sm transition-colors",
+                  overlay
+                    ? "text-white/85 hover:text-white"
+                    : cn("hover:text-plum-700", active ? "font-medium text-plum-800" : "text-muted"),
                 )}
               >
                 {item.label}
               </Link>
             );
           })}
+          <Link
+            href={CTA_HREF}
+            className={cn(
+              "rounded-full border px-5 py-2 text-sm transition-colors",
+              overlay
+                ? "border-white/70 text-white hover:bg-white hover:text-plum-900"
+                : "border-plum-800/30 text-plum-800 hover:border-plum-800 hover:bg-white",
+            )}
+          >
+            İletişim
+          </Link>
         </nav>
         <button
-          className="md:hidden -mr-2 p-2 text-plum-900"
+          className={cn("-mr-2 p-2 md:hidden", overlay ? "text-white" : "text-plum-900")}
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Menüyü aç/kapat"
