@@ -40,7 +40,7 @@ export default function HomePage() {
           hekimlerin bilimsel güveniyle geliştirildi.
         </p>
         <Button href="/hakkimizda" variant="outline">
-          Hikayemiz
+          Hakkımızda
         </Button>
       </SplitFeature>
 

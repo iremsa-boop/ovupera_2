@@ -39,7 +39,7 @@ export function HomeHero() {
             Ürünü keşfedin
           </Button>
           <a href="/hakkimizda" className="text-sm text-white/80 underline-offset-4 hover:text-white hover:underline">
-            Hikayemiz →
+            Hakkımızda →
           </a>
         </div>
 
