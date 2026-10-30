@@ -61,14 +61,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-blush-300/80 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            Copyright © {new Date().getFullYear()} - {site.name}. Tüm hakları saklıdır.
-          </p>
-          <a href={site.url} className={link}>
-            www.ovupera.com
-          </a>
-        </div>
+        <p className="mt-16 text-center text-sm text-blush-300/80">
+          Copyright © {new Date().getFullYear()} - {site.name}. Tüm hakları saklıdır.
+        </p>
       </Container>
     </footer>
   );
