@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { phoneHref, site } from "@/lib/site";
 import { Card, Container } from "@/components/ui";
 import { PageHero } from "@/components/sections";
 import { ContactForm } from "@/components/forms/ContactForm";
@@ -23,7 +23,11 @@ export default function ContactPage() {
             <ContactForm />
           </Card>
           <Card className="p-8 sm:p-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-plum-600">E-posta</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-plum-600">{site.contact.phoneLabel}</p>
+            <a href={phoneHref} className="mt-2 block font-serif text-xl text-plum-900">
+              {site.contact.phone}
+            </a>
+            <p className="mt-8 text-xs uppercase tracking-[0.3em] text-plum-600">E-posta</p>
             <a href={`mailto:${site.contact.email}`} className="mt-2 block font-serif text-xl text-plum-900">
               {site.contact.email}
             </a>

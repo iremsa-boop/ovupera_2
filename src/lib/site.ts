@@ -7,7 +7,8 @@ export const site = {
   // TODO: gerçek iletişim bilgileriyle değiştirin
   contact: {
     email: "info@ovupera.com",
-    phone: "" as string,
+    phone: "0501 683 90 26" as string,
+    phoneLabel: "Ovupera Satış ve Bilgi Hattı",
     address: "" as string,
   },
   // Boş bırakılan hesaplar footer'da gösterilmez
@@ -34,6 +35,9 @@ export const site = {
     contactEndpoint: "" as string,
   },
 } as const;
+
+/** tel: bağlantısı için uluslararası biçim (0501… → +90501…) */
+export const phoneHref = `tel:+90${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}`;
 
 /** Footer ve ürün sayfasında gösterilen, doldurulmuş şirket bilgileri */
 export const companyFacts = [

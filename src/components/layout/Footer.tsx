@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { companyFacts, footerColumns, site, socialLinks } from "@/lib/site";
+import { companyFacts, footerColumns, phoneHref, site, socialLinks } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
@@ -7,7 +7,7 @@ const heading = "font-serif text-lg text-white";
 const link = "text-blush-200 transition-colors hover:text-white";
 
 export function Footer() {
-  const { email, phone, address } = site.contact;
+  const { email, phone, phoneLabel, address } = site.contact;
 
   return (
     <footer className="bg-plum-900 text-blush-200">
@@ -19,7 +19,8 @@ export function Footer() {
               {address && <p>{address}</p>}
               {phone && (
                 <p>
-                  <a href={`tel:${phone.replace(/\s/g, "")}`} className={link}>
+                  <span className="block text-xs uppercase tracking-[0.2em] text-blush-300/80">{phoneLabel}</span>
+                  <a href={phoneHref} className={link}>
                     {phone}
                   </a>
                 </p>
