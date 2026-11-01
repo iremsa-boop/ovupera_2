@@ -10,3 +10,4 @@ export { HomeHero } from "./HomeHero";
 export { TestimonialCard } from "./TestimonialCard";
 export { Testimonials } from "./Testimonials";
 export { FaqAccordion } from "./FaqAccordion";
+export { FormulaShowcase } from "./FormulaShowcase";

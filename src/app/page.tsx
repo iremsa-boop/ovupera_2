@@ -1,12 +1,10 @@
 import { getAllPosts } from "@/lib/blog";
-import { featuredIngredients } from "@/lib/product";
 import { PostTeaserGrid } from "@/components/blog/PostTeaser";
-import { Img } from "@/components/ui/Img";
 import { Button, Container, SectionHeading } from "@/components/ui";
 import {
   CtaBanner,
+  FormulaShowcase,
   HomeHero,
-  IngredientCard,
   IntroStatement,
   Testimonials,
   UsageSteps,
@@ -20,35 +18,7 @@ export default function HomePage() {
       <HomeHero />
       <IntroStatement />
 
-      <section className="bg-blush-50 py-20 sm:py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="Formülün merkezinde"
-            title="Her biri ölçülü, her biri bilinçli."
-            intro="Yumurta hücresinin ihtiyaç duyduğu biyolojik enerji ve koruma için özenle seçilmiş özel bileşenler."
-          />
-          <div className="relative mt-14 aspect-[1834/1080] overflow-hidden rounded-[2rem]">
-            <Img
-              src="/images/kutu-formul.jpg"
-              alt="Ovupera kutusu ve 6,5 g saşe"
-              fill
-              sizes="(min-width: 1152px) 68rem, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {featuredIngredients.map((i) => (
-              <IngredientCard key={i.name} ingredient={i} />
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Button href="/bilesenler" variant="outline">
-              22 bileşenin tamamını görün
-            </Button>
-          </div>
-        </Container>
-      </section>
-
+      <FormulaShowcase />
       <UsageSteps />
       <Testimonials />
 
