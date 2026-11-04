@@ -7,7 +7,7 @@ export function AboutIntro() {
   const { titleLead, titleAccent, text } = aboutIntro;
 
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white bg-[radial-gradient(var(--color-blush-200)_1px,transparent_1px)] [background-size:22px_22px] py-16 sm:py-24">
       <Container>
         <div className="grid items-end gap-8 md:grid-cols-2 md:gap-16">
           <h1 className="text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">

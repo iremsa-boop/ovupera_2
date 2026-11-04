@@ -31,8 +31,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 border-b transition-colors duration-300",
-        overlay ? "border-transparent bg-transparent" : "border-blush-200/70 bg-blush-50/90 backdrop-blur-md",
+        "sticky top-0 z-40 transition-colors duration-300",
+        overlay ? "bg-transparent" : "bg-blush-50/90 backdrop-blur-md",
       )}
     >
       <Container className="flex h-16 items-center justify-between">
