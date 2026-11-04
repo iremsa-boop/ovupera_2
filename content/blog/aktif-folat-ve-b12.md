@@ -3,7 +3,7 @@ title: "Aktif folat ve aktif B12: Quatrefolic® ve MecobalActive®"
 excerpt: "Ovupera'da folat ve B12 vitamini neden aktif formlarıyla yer alıyor? İki hammaddeyi yakından tanıyalım."
 date: "2026-10-14"
 cover: "/images/hero-cift.jpg"
-thumb: "/images/folat.jpg"
+thumb: "/images/folat-v2.jpg"
 category: "Bileşenler"
 ---
 

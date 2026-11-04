@@ -3,7 +3,7 @@ title: "Yoğun bir günün ortasında size ait küçük bir mola"
 excerpt: "Evde de ofiste de: Ovupera'yı günlük rutininize nasıl kolayca ekleyebileceğinize dair küçük öneriler."
 date: "2026-10-07"
 cover: "/images/hakkimizda-ofis.jpg"
-thumb: "/images/lifestyle-ofis.jpg"
+thumb: "/images/lifestyle-ofis-v2.jpg"
 category: "Yaşam"
 ---
 
