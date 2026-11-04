@@ -3,7 +3,7 @@ import { companyFacts, footerColumns, phoneHref, site, socialLinks } from "@/lib
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
-const heading = "font-serif text-lg text-white";
+const heading = "font-serif text-lg font-bold text-white";
 const link = "text-blush-200 transition-colors hover:text-white";
 
 export function Footer() {
