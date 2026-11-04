@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
-import { BlogExplorer } from "@/components/blog/BlogExplorer";
+import { PostGrid } from "@/components/blog/PostGrid";
 import { Container } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function BlogPage() {
         <Container>
           <h2 className="font-serif text-3xl text-plum-900 sm:text-4xl">Tüm Yazılar</h2>
           <div className="mt-8">
-            <BlogExplorer posts={posts} />
+            <PostGrid posts={posts} featured />
           </div>
         </Container>
       </section>
