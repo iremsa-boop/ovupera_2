@@ -70,7 +70,7 @@ export default function ProductPage() {
         </Container>
       </section>
 
-      <section className="bg-blush-100 py-20 sm:py-24">
+      <section id="bilesenler" className="scroll-mt-20 bg-blush-100 py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Tek formül"

@@ -70,7 +70,7 @@ export const footerColumns = [
     title: "Ovupera",
     links: [
       { href: "/urun", label: "Ürün" },
-      { href: "/bilesenler", label: "Bileşenler" },
+      { href: "/urun#bilesenler", label: "Bileşenler" },
       { href: "/urun#kullanim", label: "Kullanım" },
     ],
   },
@@ -78,7 +78,6 @@ export const footerColumns = [
 
 export const navigation = [
   { href: "/urun", label: "Ürün" },
-  { href: "/bilesenler", label: "Bileşenler" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/blog", label: "Blog" },
   { href: "/iletisim", label: "İletişim" },

@@ -1,6 +1,5 @@
 export { BenefitGrid } from "./BenefitGrid";
 export { IntroStatement } from "./IntroStatement";
-export { IngredientCard } from "./IngredientCard";
 export { IngredientTable } from "./IngredientTable";
 export { PageHero } from "./PageHero";
 export { ProductionGallery } from "./ProductionGallery";

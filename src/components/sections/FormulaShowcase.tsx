@@ -44,7 +44,7 @@ export function FormulaShowcase() {
           </dl>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <Button href="/bilesenler">22 bileşenin tamamı</Button>
+            <Button href="/urun#bilesenler">22 bileşenin tamamı</Button>
             <span className="text-sm text-plum-950/60">6,5 g saşe · 30 saşe / kutu</span>
           </div>
         </div>

@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     // Optimize edilmiş görseller 30 gün önbellekte tutulur
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
+  // Bileşenler sayfası kaldırıldı; eski bağlantılar ürün sayfasındaki bileşen tablosuna gider
+  async redirects() {
+    return [{ source: "/bilesenler", destination: "/urun#bilesenler", permanent: true }];
+  },
   async headers() {
     return [
       {
