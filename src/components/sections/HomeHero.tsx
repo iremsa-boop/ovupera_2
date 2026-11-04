@@ -30,10 +30,10 @@ export function HomeHero() {
           Gebelik planlayan kadınlar için takviye edici gıda
         </p>
         <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-          Zamanı değil, <em className="text-blush-300">gücü</em> yönetmek.
+          Tek saşe, <em className="text-blush-300">eksiksiz hazırlık.</em>
         </h1>
         <p className="mt-5 max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
-          Aşılama ve tüp bebek süreçleri öncesinde hücresel enerjiyi desteklemek için 22 bileşen, tek saşede.
+          Aşılama ve tüp bebek süreçleri öncesinde hücresel enerjiyi desteklemek için 22 bileşen bir arada.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button href="/urun" variant="light">

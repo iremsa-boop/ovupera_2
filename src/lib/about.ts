@@ -1,8 +1,8 @@
 export type ValueIcon = "check" | "flask" | "heart";
 
 export const aboutIntro = {
-  titleLead: "Zamanı değil,",
-  titleAccent: "gücü yönetmek.",
+  titleLead: "Tek saşe,",
+  titleAccent: "eksiksiz hazırlık.",
   text: "Ovupera basit bir inançla doğdu: Annelik yolculuğunda belirleyici olan zaman değil, hücresel güçtür. Bilimin ışığını hekimlerin güveniyle birleştiriyor, bu özel yolculuğa çıkan her kadının yanında olmak için çalışıyoruz.",
 };
 

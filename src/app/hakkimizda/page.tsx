@@ -7,7 +7,7 @@ import { ProductionGallery } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
-  description: "Zamanı değil, gücü yönetmek: Ovupera'nın hikayesi, değerleri ve üretimi.",
+  description: "Tek saşe, eksiksiz hazırlık: Ovupera'nın hikayesi, değerleri ve üretimi.",
 };
 
 export default function AboutPage() {
