@@ -8,7 +8,6 @@ export const site = {
   contact: {
     email: "info@ovupera.com",
     phone: "0501 683 90 26" as string,
-    phoneLabel: "Ovupera Satış ve Bilgi Hattı",
     address: "" as string,
   },
   // Boş bırakılan hesaplar footer'da gösterilmez
@@ -24,11 +23,6 @@ export const site = {
     manufacturerAddress: "" as string,
     /** Tarım ve Orman Bakanlığı onay / kayıt numarası */
     registrationNo: "" as string,
-  },
-  // "Nereden alınır?" butonu. Satış bağlantısı (e-ticaret, eczane listesi) gelince href'i değiştirin.
-  purchase: {
-    label: "Nereden alınır?",
-    href: "/iletisim#nereden-alinir" as string,
   },
   forms: {
     /** Formspree / Getform gibi bir servisin adresi. Boşken form e-posta uygulamasını açar. */

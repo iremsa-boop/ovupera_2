@@ -1,4 +1,3 @@
-import { site } from "@/lib/site";
 import { Img } from "@/components/ui/Img";
 import { Button, Container } from "@/components/ui";
 
@@ -39,9 +38,6 @@ export function HomeHero() {
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button href="/urun" variant="light">
             Ürünü inceleyin
-          </Button>
-          <Button href={site.purchase.href} variant="outline" className="border-white/50 text-white hover:border-white hover:bg-white/10">
-            {site.purchase.label}
           </Button>
         </div>
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75">
