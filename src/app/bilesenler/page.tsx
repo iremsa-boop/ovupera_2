@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { groupLabels, ingredientsByGroup, type IngredientGroup } from "@/lib/product";
 import { Card, Container, SectionHeading } from "@/components/ui";
-import { CtaBanner, IngredientCard, PageHero } from "@/components/sections";
+import { IngredientCard, PageHero } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Bileşenler",
@@ -65,7 +65,6 @@ export default function IngredientsPage() {
         </Container>
       </section>
 
-      <CtaBanner />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { Img } from "@/components/ui/Img";
 import { Card, Container, Pill, SectionHeading } from "@/components/ui";
 import { companyFacts, productDisclaimer } from "@/lib/site";
 import { productFaq } from "@/lib/product";
-import { BenefitGrid, CtaBanner, FaqAccordion, IngredientTable, PageHero, UsageSteps } from "@/components/sections";
+import { BenefitGrid, FaqAccordion, IngredientTable, PageHero, UsageSteps } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Ürün",
@@ -105,7 +105,6 @@ export default function ProductPage() {
         </Container>
       </section>
 
-      <CtaBanner />
     </>
   );
 }

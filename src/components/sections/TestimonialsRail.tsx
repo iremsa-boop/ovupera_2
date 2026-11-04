@@ -42,7 +42,7 @@ export function TestimonialsRail({ title, children }: Props) {
       {/* Kartlar container hizasında başlar, sağa doğru sayfa kenarına kadar taşar */}
       <div
         ref={rail}
-        className="mt-12 flex snap-x snap-mandatory scroll-px-[var(--gutter)] gap-5 overflow-x-auto px-[var(--gutter)] pb-4 [--gutter:1.25rem] [scrollbar-width:none] sm:[--gutter:2rem] xl:[--gutter:max(2rem,calc((100%-72rem)/2+2rem))]"
+        className="mt-12 flex snap-x snap-mandatory scroll-px-[var(--gutter)] gap-5 overflow-x-auto px-[var(--gutter)] pb-4 [--gutter:1.25rem] [scrollbar-width:none] sm:[--gutter:2rem] lg:[--gutter:3rem] min-[1400px]:[--gutter:calc((100%-1400px)/2+3rem)]"
       >
         {children}
       </div>

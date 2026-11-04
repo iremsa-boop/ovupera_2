@@ -2,7 +2,6 @@ import { getAllPosts } from "@/lib/blog";
 import { PostTeaserGrid } from "@/components/blog/PostTeaser";
 import { Button, Container, SectionHeading } from "@/components/ui";
 import {
-  CtaBanner,
   FormulaShowcase,
   HomeHero,
   IntroStatement,
@@ -38,7 +37,6 @@ export default function HomePage() {
         </section>
       )}
 
-      <CtaBanner />
     </>
   );
 }

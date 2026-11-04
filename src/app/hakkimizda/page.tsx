@@ -4,7 +4,7 @@ import { AboutIntro } from "@/components/about/AboutIntro";
 import { AboutStory } from "@/components/about/AboutStory";
 import { CoreValues } from "@/components/about/CoreValues";
 import { Container, SectionHeading } from "@/components/ui";
-import { CtaBanner, ProductionGallery } from "@/components/sections";
+import { ProductionGallery } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
@@ -32,12 +32,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <CtaBanner
-        title="Gebe kalma yolculuğunuzda bilimin gücünü keşfedin."
-        text="Bizi takip etmeyi ve kullanım öncesinde doktorunuza danışmayı unutmayın."
-        href="/urun"
-        label="Ovupera'yı tanıyın"
-      />
     </>
   );
 }
