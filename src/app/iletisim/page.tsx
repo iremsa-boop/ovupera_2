@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="İletişim"
-        title="Size nasıl yardımcı olabiliriz?"
+        title="Bize Ulaşın"
         intro="Ürünle ilgili sorularınız, iş birlikleri ve geri bildirimleriniz için bize yazın."
       />
       <section className="pb-24">
