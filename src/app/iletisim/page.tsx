@@ -42,13 +42,13 @@ export default function ContactPage() {
             Ürünle ilgili sorularınız, iş birlikleri ve geri bildirimleriniz için bize yazın.
           </p>
 
-          <ul className="mt-10 divide-y divide-plum-900/10 border-y border-plum-900/10">
+          <ul className="mt-8 space-y-1">
             {channels.map((c) => (
               <li key={c.label}>
                 <a
                   href={c.href}
                   {...(c.external && { target: "_blank", rel: "noreferrer" })}
-                  className="group flex items-center gap-4 py-5"
+                  className="group flex items-center gap-4 py-3"
                 >
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-white text-plum-700 ring-1 ring-plum-900/10 transition group-hover:bg-plum-800 group-hover:text-white">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
