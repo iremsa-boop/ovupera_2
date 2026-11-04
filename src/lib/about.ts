@@ -12,16 +12,6 @@ export const aboutStory = [
   "Hekimlerin bilimsel güvenine, kadınların ise umut dolu yolculuklarına eşlik eden Ovupera; yeni bir hayata atılan her adımda bedeninize ihtiyaç duyduğu hücresel desteği sunmak için burada.",
 ];
 
-export const aboutHello = {
-  eyebrow: "Merhaba!",
-  title: "Biz Ovupera.",
-  paragraphs: [
-    "Yeni bir hayata adım atma fikrinin heyecanını, umudunu ve bazen de getirdiği soruları çok iyi biliyoruz.",
-    "Özellikle annelik yolculuğuna çıkan kadınlar için zamanın değil, hücresel gücün ne kadar belirleyici olduğunun farkındayız. Bilimin ışığında, hekimlerin güveniyle geliştirdiğimiz Ovupera; Miyo-inositol, Koenzim Q10, Resveratrol, L-Karnitin ve güçlü multivitamin/mineral kompleksiyle bedeninizin doğal potansiyelini desteklemek için burada.",
-    "Aşılama ve tüp bebek (IVF) süreçleri öncesinde yumurta (oosit) kalitesini ve hücresel enerjiyi desteklemeye yönelik hekim önerili formülümüzle, bu özel yolculukta yanınızdayız.",
-  ],
-};
-
 export const coreValues: { icon: ValueIcon; title: string; text: string }[] = [
   {
     icon: "check",

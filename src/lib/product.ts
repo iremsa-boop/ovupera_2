@@ -160,10 +160,10 @@ export const benefitHighlights: { title: string; text: string; nutrients: string
 ];
 
 export const productionImages = [
-  { src: "/images/uretim-saset-dolum.jpg", alt: "Saşe dolum hattı" },
-  { src: "/images/uretim-monodoz.jpg", alt: "Monodoz paketleme hattı" },
-  { src: "/images/uretim-shrink.jpg", alt: "Otomatik shrink paketleme" },
-  { src: "/images/uretim-kaplama.jpg", alt: "Tablet kaplama ünitesi" },
+  { src: "/images/uretim-saset-dolum-v2.jpg", alt: "Saşe dolum hattı" },
+  { src: "/images/uretim-monodoz-v2.jpg", alt: "Monodoz paketleme hattı" },
+  { src: "/images/uretim-shrink-v2.jpg", alt: "Otomatik shrink paketleme" },
+  { src: "/images/uretim-kaplama-v2.jpg", alt: "Tablet kaplama ünitesi" },
 ] as const;
 
 export const productFaq = [

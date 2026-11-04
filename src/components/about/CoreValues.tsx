@@ -18,10 +18,8 @@ export function CoreValues() {
     <section className="bg-blush-100 py-20 sm:py-28">
       <Container>
         <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl">
-            <span className="font-sans font-medium tracking-tight text-ink">Temel </span>
-            <em className="font-serif text-plum-700">değerlerimiz</em>
-          </h2>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-plum-600">İlkelerimiz</p>
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-plum-900 sm:text-5xl">Temel değerlerimiz</h2>
           <p className="mt-4 text-muted">Araştırmadan formüle, yaptığımız her şeye yön veren ilkeler.</p>
         </div>
 
@@ -32,7 +30,7 @@ export function CoreValues() {
               <article
                 key={v.title}
                 className={cn(
-                  "flex min-h-64 flex-col rounded-2xl p-7 shadow-[0_2px_12px_-6px_rgba(74,18,56,0.15)]",
+                  "flex flex-col items-center rounded-2xl px-7 py-10 text-center shadow-[0_2px_12px_-6px_rgba(74,18,56,0.15)]",
                   featured ? "bg-plum-800 text-white" : "bg-white",
                 )}
               >
@@ -46,8 +44,8 @@ export function CoreValues() {
                     {icons[v.icon]}
                   </svg>
                 </span>
-                <h3 className={cn("mt-auto pt-12 text-xl", featured ? "text-white" : "text-ink")}>{v.title}</h3>
-                <p className={cn("mt-2 text-sm leading-relaxed", featured ? "text-blush-200" : "text-muted")}>{v.text}</p>
+                <h3 className={cn("mt-6 text-xl", featured ? "text-white" : "text-ink")}>{v.title}</h3>
+                <p className={cn("mt-2 max-w-xs text-sm leading-relaxed", featured ? "text-blush-200" : "text-muted")}>{v.text}</p>
               </article>
             );
           })}

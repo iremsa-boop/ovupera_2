@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AboutHello } from "@/components/about/AboutHello";
 import { AboutIntro } from "@/components/about/AboutIntro";
 import { AboutStory } from "@/components/about/AboutStory";
 import { CoreValues } from "@/components/about/CoreValues";
@@ -16,7 +15,6 @@ export default function AboutPage() {
     <>
       <AboutIntro />
       <AboutStory />
-      <AboutHello />
       <CoreValues />
 
       <section className="bg-white py-20 sm:py-24">
