@@ -26,10 +26,6 @@ export default function BlogPage() {
       <section className="bg-white pb-24">
         <Container>
           <h2 className="font-serif text-3xl text-plum-900 sm:text-4xl">Tüm Yazılar</h2>
-          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-            İçerikler, hekimlerin ve bilimsel kaynakların ışığında hazırlanır. Sağlığınızla ilgili kararlar için her
-            zaman doktorunuza danışın.
-          </p>
           <div className="mt-8">
             <BlogExplorer posts={posts} />
           </div>
