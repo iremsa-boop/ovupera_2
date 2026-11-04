@@ -4,10 +4,6 @@ export const aboutIntro = {
   titleLead: "Zamanı değil,",
   titleAccent: "gücü yönetmek.",
   text: "Ovupera basit bir inançla doğdu: Annelik yolculuğunda belirleyici olan zaman değil, hücresel güçtür. Bilimin ışığını hekimlerin güveniyle birleştiriyor, bu özel yolculuğa çıkan her kadının yanında olmak için çalışıyoruz.",
-  badge: {
-    title: "Hekim önerili formül",
-    text: "Aşılama ve tüp bebek süreçleri öncesi için, klinik araştırmaların ışığında geliştirildi.",
-  },
 };
 
 export const aboutStory = [

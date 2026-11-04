@@ -4,7 +4,7 @@ import { Container } from "@/components/ui";
 
 /** Hakkımızda girişi: iki tonlu başlık + kısa metin, altında küçük/büyük fotoğraf ikilisi */
 export function AboutIntro() {
-  const { titleLead, titleAccent, text, badge } = aboutIntro;
+  const { titleLead, titleAccent, text } = aboutIntro;
 
   return (
     <section className="bg-white bg-[radial-gradient(var(--color-blush-200)_1px,transparent_1px)] [background-size:22px_22px] py-16 sm:py-24">
@@ -38,18 +38,6 @@ export function AboutIntro() {
               sizes="(min-width: 768px) 66vw, 100vw"
               className="object-cover object-[50%_40%]"
             />
-            <div className="absolute bottom-4 right-4 flex max-w-xs items-start gap-3 rounded-xl bg-white/95 p-3.5 shadow-lg backdrop-blur sm:bottom-5 sm:right-5">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-blush-100 text-plum-700">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-                  <circle cx="12" cy="9" r="6" />
-                  <path d="M9 14.5L8 22l4-2 4 2-1-7.5" />
-                </svg>
-              </span>
-              <div>
-                <p className="text-sm font-medium text-ink">{badge.title}</p>
-                <p className="mt-0.5 text-xs leading-snug text-muted">{badge.text}</p>
-              </div>
-            </div>
           </div>
         </div>
       </Container>
