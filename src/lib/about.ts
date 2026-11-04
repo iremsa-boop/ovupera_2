@@ -1,5 +1,3 @@
-export type ValueIcon = "check" | "flask" | "heart";
-
 export const aboutIntro = {
   titleLead: "Tek saşe,",
   titleAccent: "eksiksiz hazırlık.",
@@ -12,19 +10,16 @@ export const aboutStory = [
   "Hekimlerin bilimsel güvenine, kadınların ise umut dolu yolculuklarına eşlik eden Ovupera; yeni bir hayata atılan her adımda bedeninize ihtiyaç duyduğu hücresel desteği sunmak için burada.",
 ];
 
-export const coreValues: { icon: ValueIcon; title: string; text: string }[] = [
+export const coreValues: { title: string; text: string }[] = [
   {
-    icon: "check",
     title: "Şeffaflık",
     text: "Formülümüzdeki her bileşeni ve miktarını açıkça paylaşıyor, onaylı beyanların ötesinde vaatte bulunmuyoruz.",
   },
   {
-    icon: "flask",
     title: "Bilimsellik",
     text: "Formülümüzü klinik araştırmaların ışığında, hekimlerin bilimsel güvenine dayanarak geliştiriyoruz.",
   },
   {
-    icon: "heart",
     title: "Empati",
     text: "Yeni bir hayata adım atmanın heyecanını, umudunu ve sorularını biliyor; her kadını bu yolculukta anlayışla dinliyoruz.",
   },
