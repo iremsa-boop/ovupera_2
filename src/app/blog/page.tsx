@@ -14,7 +14,7 @@ export default function BlogPage() {
   return (
     <>
       <section className="bg-gradient-to-b from-blush-100 to-white">
-        <Container className="py-20 text-center sm:py-24">
+        <Container className="pb-10 pt-20 text-center sm:pb-12 sm:pt-24">
           <h1 className="font-serif text-4xl leading-tight text-plum-900 sm:text-6xl">Bilgi ve Güncellemeler</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted">
             Annelik yolculuğunu planlayan kadınlar için seçilmiş yazılar. Bileşenler, etiket okuma ve günlük rutine dair
@@ -23,7 +23,7 @@ export default function BlogPage() {
         </Container>
       </section>
 
-      <section className="bg-white pb-24 pt-12 sm:pt-16">
+      <section className="bg-white pb-24 pt-4 sm:pt-6">
         <Container>
           <h2 className="font-serif text-3xl text-plum-900 sm:text-4xl">Tüm Yazılar</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
