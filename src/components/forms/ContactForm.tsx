@@ -5,7 +5,8 @@ import { site } from "@/lib/site";
 import { Button } from "@/components/ui";
 
 const field =
-  "w-full rounded-2xl border border-blush-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-plum-600 focus:ring-2 focus:ring-plum-600/15";
+  "w-full rounded-xl border border-plum-900/15 bg-blush-50/40 px-4 py-3 text-[15px] text-ink outline-none transition placeholder:text-muted/60 hover:border-plum-900/25 focus:border-plum-600 focus:bg-white focus:ring-4 focus:ring-plum-600/10";
+const label = "mb-2 block text-sm font-medium text-plum-950";
 
 type Status = "idle" | "sending" | "sent" | "mailto" | "error";
 
@@ -48,29 +49,31 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-2">
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">Ad Soyad</span>
-          <input name="name" required className={field} />
+          <span className={label}>Ad Soyad</span>
+          <input name="name" required autoComplete="name" placeholder="Adınız ve soyadınız" className={field} />
         </label>
         <label className="block">
-          <span className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">E-posta</span>
-          <input name="email" type="email" required className={field} />
+          <span className={label}>E-posta</span>
+          <input name="email" type="email" required autoComplete="email" placeholder="ornek@eposta.com" className={field} />
         </label>
       </div>
       <label className="block">
-        <span className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">Mesajınız</span>
-        <textarea name="message" rows={6} required className={field} />
+        <span className={label}>Mesajınız</span>
+        <textarea name="message" rows={6} required placeholder="Size nasıl yardımcı olabiliriz?" className={`${field} resize-none`} />
       </label>
-      <Button type="submit" disabled={status === "sending"}>
-        {status === "sending" ? "Gönderiliyor…" : "Gönder"}
-      </Button>
-      {messages[status] && (
-        <p role="status" className="text-sm text-plum-700">
-          {messages[status]}
-        </p>
-      )}
+      <div className="flex flex-wrap items-center gap-4 pt-1">
+        <Button type="submit" disabled={status === "sending"} className="px-8">
+          {status === "sending" ? "Gönderiliyor…" : "Mesajı gönder"}
+        </Button>
+        {messages[status] && (
+          <p role="status" className="text-sm text-plum-700">
+            {messages[status]}
+          </p>
+        )}
+      </div>
     </form>
   );
 }
