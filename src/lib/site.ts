@@ -9,6 +9,9 @@ export const site = {
     email: "info@ovupera.com",
     phone: "0501 683 90 26" as string,
     address: "" as string,
+    /** Sağ alttaki "Hemen satın al" WhatsApp butonu; boşsa buton gösterilmez */
+    whatsapp: "0501 683 90 26" as string,
+    whatsappMessage: "Merhaba, Ovupera satın almak istiyorum.",
   },
   // Boş bırakılan hesaplar footer'da gösterilmez
   social: {
@@ -32,6 +35,11 @@ export const site = {
 
 /** tel: bağlantısı için uluslararası biçim (0501… → +90501…) */
 export const phoneHref = `tel:+90${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}`;
+
+/** wa.me bağlantısı (0501… → 90501…), hazır mesajla */
+export const whatsappHref = site.contact.whatsapp
+  ? `https://wa.me/90${site.contact.whatsapp.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent(site.contact.whatsappMessage)}`
+  : "";
 
 /** Footer ve ürün sayfasında gösterilen, doldurulmuş şirket bilgileri */
 export const companyFacts = [
