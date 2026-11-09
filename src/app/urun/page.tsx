@@ -3,7 +3,7 @@ import { Img } from "@/components/ui/Img";
 import { Card, Container, Pill, SectionHeading } from "@/components/ui";
 import { companyFacts, productDisclaimer } from "@/lib/site";
 import { productFaq } from "@/lib/product";
-import { BenefitGrid, FaqAccordion, IngredientTable, PageHero, Testimonials, UsageSteps } from "@/components/sections";
+import { FaqAccordion, IngredientTable, PageHero, Testimonials, UsageSteps } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Ürün",
@@ -92,7 +92,6 @@ export default function ProductPage() {
 
       <UsageSteps />
       <Testimonials />
-      <BenefitGrid />
 
       <section className="py-20 sm:py-24">
         <Container>

@@ -136,29 +136,6 @@ export const usageSteps = [
   { step: "03", title: "Günde 1 saşe tüketin", text: "Size ait küçük bir mola." },
 ] as const;
 
-export type BenefitIcon = "cell" | "shield" | "cycle";
-
-export const benefitHighlights: { title: string; text: string; nutrients: string; icon: BenefitIcon }[] = [
-  {
-    title: "Hücre bölünmesi",
-    text: "Hücre bölünmesi sürecinde görev alır.",
-    nutrients: "Folat · B12 vitamini · D vitamini · Çinko",
-    icon: "cell",
-  },
-  {
-    title: "Bağışıklık",
-    text: "Bağışıklık sisteminin normal fonksiyonuna katkıda bulunur.",
-    nutrients: "C · D3 · B6 · B12 vitamini · Folat · Çinko · Selenyum",
-    icon: "shield",
-  },
-  {
-    title: "Homosistein metabolizması",
-    text: "Normal homosistein metabolizmasına katkıda bulunur.",
-    nutrients: "Folat · B6 vitamini · B12 vitamini",
-    icon: "cycle",
-  },
-];
-
 export const productionImages = [
   { src: "/images/uretim-saset-dolum-v3.jpg", alt: "Saşe dolum hattı" },
   { src: "/images/uretim-monodoz-v2.jpg", alt: "Monodoz paketleme hattı" },

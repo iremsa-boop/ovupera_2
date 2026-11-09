@@ -1,4 +1,3 @@
-export { BenefitGrid } from "./BenefitGrid";
 export { IntroStatement } from "./IntroStatement";
 export { IngredientTable } from "./IngredientTable";
 export { PageHero } from "./PageHero";
