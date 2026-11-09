@@ -21,13 +21,13 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     date: "2026-11-09",
   },
+  // Gerçek kullanıcı yorumu (9 Kasım 2026)
   {
-    name: "Ayşe K.",
-    meta: "İstanbul",
-    text: "Saşeyi suyla karıştırmak çok pratik, şeftali aroması da hoş. Sabah kahvaltısıyla birlikte rutinimin bir parçası oldu.",
+    name: "Elif S.",
+    meta: "Eskişehir",
+    text: "Saşeyi suyla karıştırmak çok pratik, şeftali aroması da hoş. Sabah kahvaltısıyla birlikte rutinimin bir parçası oldu. Yumurta kalitemde artış görüldü.",
     rating: 5,
-    date: "2026-10-20",
-    sample: true,
+    date: "2026-11-09",
   },
   {
     name: "Elif D.",
