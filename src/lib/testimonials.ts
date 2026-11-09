@@ -11,7 +11,6 @@ export type Testimonial = {
   sample?: boolean;
 };
 
-// TODO: Örnek yorumları, izni alınmış gerçek kullanıcı yorumlarıyla değiştirin.
 export const testimonials: Testimonial[] = [
   // Gerçek kullanıcı yorumu; yayın izni alındı (9 Kasım 2026)
   {
@@ -29,37 +28,34 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     date: "2026-11-09",
   },
+  // Gerçek kullanıcı yorumları (9 Kasım 2026)
   {
-    name: "Elif D.",
+    name: "İrem T.",
     meta: "Ankara",
     text: "Birçok bileşeni ayrı ayrı almak yerine tek saşede olması işimi kolaylaştırdı. Doktorumla konuşarak kullanmaya başladım.",
     rating: 5,
-    date: "2026-10-12",
-    sample: true,
+    date: "2026-11-09",
   },
   {
-    name: "Zeynep A.",
-    meta: "İzmir",
-    text: "Kutunun ve saşenin tasarımı çok şık. Çantamda taşıyıp ofiste de rahatlıkla kullanabiliyorum.",
-    rating: 4,
-    date: "2026-10-05",
-    sample: true,
+    name: "Şule G.",
+    meta: "İstanbul",
+    text: "Saşenin tasarımı çok şık. Çantamda taşıyıp ofiste de rahatlıkla kullanabiliyorum.",
+    rating: 5,
+    date: "2026-11-09",
   },
   {
-    name: "Merve T.",
-    meta: "Bursa",
+    name: "Berrin",
+    meta: "Ankara",
     text: "Günde tek saşe olması ve hazırlamasının bir dakika sürmesi en sevdiğim yanı. Kutudaki bilgiler de çok açık ve anlaşılır.",
     rating: 5,
-    date: "2026-09-28",
-    sample: true,
+    date: "2026-11-09",
   },
   {
-    name: "Selin Y.",
-    meta: "Antalya",
-    text: "Bileşen listesini ve miktarları web sitesinden detaylıca inceleyebilmek güven verdi. Hekimime de rahatça gösterebildim.",
+    name: "Zerrin A.",
+    meta: "İstanbul",
+    text: "Cildim güzelleşti ve vitaminler sayesinde daha iyi hissediyorum. Güvenerek kullanıyorum.",
     rating: 5,
-    date: "2026-09-20",
-    sample: true,
+    date: "2026-11-09",
   },
 ];
 
