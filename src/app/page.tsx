@@ -22,10 +22,10 @@ export default function HomePage() {
       <Testimonials />
 
       {posts.length > 0 && (
-        <section className="py-20 sm:py-24">
+        <section className="py-16 sm:py-24">
           <Container>
             <SectionHeading eyebrow="Blog" title="Bilgiyle güçlenen yolculuk" align="left" />
-            <div className="mt-12">
+            <div className="mt-8 sm:mt-12">
               <PostTeaserGrid posts={posts} />
             </div>
           </Container>

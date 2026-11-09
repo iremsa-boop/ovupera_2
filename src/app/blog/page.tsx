@@ -14,19 +14,19 @@ export default function BlogPage() {
   return (
     <>
       <section className="bg-gradient-to-b from-blush-100 to-white">
-        <Container className="pb-8 pt-20 text-center sm:pt-24">
-          <h1 className="font-serif text-4xl leading-tight text-plum-900 sm:text-6xl">Bilgi ve Güncellemeler</h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+        <Container className="pb-6 pt-12 text-center sm:pb-8 sm:pt-24">
+          <h1 className="font-serif text-[2rem] leading-tight text-plum-900 sm:text-6xl">Bilgi ve Güncellemeler</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
             Annelik yolculuğunu planlayan kadınlar için seçilmiş yazılar. Bileşenler, etiket okuma ve günlük rutine dair
             bilimin ışığında, anlaşılır bilgiler.
           </p>
         </Container>
       </section>
 
-      <section className="bg-white pb-24">
+      <section className="bg-white pb-20 sm:pb-24">
         <Container>
-          <h2 className="font-serif text-3xl text-plum-900 sm:text-4xl">Tüm Yazılar</h2>
-          <div className="mt-8">
+          <h2 className="font-serif text-2xl text-plum-900 sm:text-4xl">Tüm Yazılar</h2>
+          <div className="mt-6 sm:mt-8">
             <PostGrid posts={posts} featured />
           </div>
         </Container>

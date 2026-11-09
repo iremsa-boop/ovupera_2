@@ -22,8 +22,8 @@ export function Testimonials() {
       <section className={band}>
         <Container className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div>
-            <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">{title}</h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">
+            <h2 className="font-serif text-[2rem] leading-tight text-white sm:text-5xl">{title}</h2>
+            <p className="mt-4 max-w-xl text-base leading-relaxed sm:text-lg text-white/80">
               Kullanıcılarımızın deneyimleri çok yakında burada. Siz de yolculuğunuzu bizimle paylaşın.
             </p>
           </div>

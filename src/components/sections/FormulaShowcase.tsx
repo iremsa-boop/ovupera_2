@@ -22,7 +22,7 @@ export function FormulaShowcase() {
 
         <div>
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-plum-700">Tek saşe, tam formül</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-plum-950 sm:text-5xl">
+          <h2 className="mt-4 font-serif text-[2rem] leading-tight text-plum-950 sm:text-5xl">
             Her biri ölçülü, <em className="text-plum-700">her biri bilinçli.</em>
           </h2>
           <p className="mt-5 max-w-md leading-relaxed text-plum-950/70">
@@ -33,12 +33,12 @@ export function FormulaShowcase() {
             {featuredIngredients.map((i) => (
               <div key={i.name} className="flex items-baseline justify-between gap-6 border-b border-plum-950/15 py-4">
                 <dt>
-                  <span className="font-serif text-xl text-plum-950">{i.name}</span>
+                  <span className="font-serif text-lg text-plum-950 sm:text-xl">{i.name}</span>
                   {i.detail && (
                     <span className="mt-0.5 block text-[11px] uppercase tracking-[0.2em] text-plum-700/80">{i.detail}</span>
                   )}
                 </dt>
-                <dd className="shrink-0 font-serif text-2xl text-plum-800 tabular-nums">{i.amount}</dd>
+                <dd className="shrink-0 font-serif text-xl text-plum-800 sm:text-2xl tabular-nums">{i.amount}</dd>
               </div>
             ))}
           </dl>

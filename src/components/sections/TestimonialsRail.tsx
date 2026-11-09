@@ -27,8 +27,8 @@ export function TestimonialsRail({ title, subtitle, children }: Props) {
     <>
       <Container className="flex items-end justify-between gap-6">
         <div>
-          <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">{title}</h2>
-          {subtitle && <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">{subtitle}</p>}
+          <h2 className="font-serif text-[2rem] leading-tight text-white sm:text-5xl">{title}</h2>
+          {subtitle && <p className="mt-4 max-w-xl text-base leading-relaxed sm:text-lg text-white/80">{subtitle}</p>}
         </div>
         <div className="hidden shrink-0 gap-3 md:flex">
           <button type="button" onClick={() => scroll(-1)} className={arrow} aria-label="Önceki yorumlar">

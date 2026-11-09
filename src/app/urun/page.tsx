@@ -46,7 +46,7 @@ export default function ProductPage() {
             />
           </div>
           <div>
-            <h2 className="font-serif text-4xl text-plum-900">Ovupera</h2>
+            <h2 className="font-serif text-3xl text-plum-900 sm:text-4xl">Ovupera</h2>
             <p className="mt-4 leading-relaxed text-muted">
               Yumurta hücresinin ihtiyaç duyduğu biyolojik enerjiyi ve korumayı tek bir saşede sunar. Aktif folat
               (Quatrefolic®) ve aktif B12 (MecobalActive®) dahil 10 özel bileşen, 10 vitamin ve 2 mineral.

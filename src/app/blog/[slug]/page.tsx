@@ -43,10 +43,10 @@ export default async function PostPage({ params }: Params) {
               <span className="h-3.5 w-px bg-blush-300" aria-hidden />
               <span className="text-muted">{post.readingTime} dk okuma</span>
             </p>
-            <h1 className="mt-4 font-serif text-3xl leading-tight text-plum-900 sm:text-5xl">
+            <h1 className="mt-4 font-serif text-[1.75rem] leading-tight text-plum-900 sm:text-5xl">
               {post.title}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-muted">{post.excerpt}</p>
+            <p className="mt-5 text-base leading-relaxed sm:text-lg text-muted">{post.excerpt}</p>
           </Container>
         </header>
         <Container className="max-w-3xl pb-24">

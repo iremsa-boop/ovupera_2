@@ -17,14 +17,14 @@ export function SectionHeading({ eyebrow, title, intro, align = "center", tone =
       {eyebrow && <Eyebrow className={cn("mb-4", light && "text-blush-300")}>{eyebrow}</Eyebrow>}
       <h2
         className={cn(
-          "font-serif text-3xl leading-tight sm:text-4xl",
+          "font-serif text-[1.7rem] leading-tight sm:text-4xl",
           light ? "text-white" : "text-plum-900",
         )}
       >
         {title}
       </h2>
       {intro && (
-        <p className={cn("mt-5 text-base leading-relaxed", light ? "text-blush-200" : "text-muted")}>{intro}</p>
+        <p className={cn("mt-4 text-[15px] leading-relaxed sm:mt-5 sm:text-base", light ? "text-blush-200" : "text-muted")}>{intro}</p>
       )}
     </div>
   );
