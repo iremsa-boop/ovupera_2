@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Img } from "@/components/ui/Img";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
@@ -55,11 +54,8 @@ export default async function PostPage({ params }: Params) {
             <p className="mt-5 text-lg leading-relaxed text-muted">{post.excerpt}</p>
           </Container>
         </header>
-        <Container className="max-w-4xl">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-blush-200">
-            <Img src={post.cover} alt="" fill priority sizes="(min-width: 896px) 56rem, 100vw" className="object-cover" />
-          </div>
-          <div className="prose-ovupera mx-auto mt-14 max-w-2xl" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Container className="max-w-3xl">
+          <div className="prose-ovupera" dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
       </article>
 

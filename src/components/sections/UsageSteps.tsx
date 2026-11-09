@@ -1,5 +1,5 @@
 import { usageSteps } from "@/lib/product";
-import { Card, Container, SectionHeading } from "@/components/ui";
+import { Container, SectionHeading } from "@/components/ui";
 
 export function UsageSteps() {
   return (
@@ -15,11 +15,11 @@ export function UsageSteps() {
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {usageSteps.map((s) => (
-            <Card key={s.step} className="text-center">
+            <div key={s.step} className="px-6 text-center">
               <p className="font-serif text-3xl text-plum-700">{s.step}</p>
               <p className="mt-3 font-medium text-plum-950">{s.title}</p>
               <p className="mt-1 text-sm text-muted">{s.text}</p>
-            </Card>
+            </div>
           ))}
         </div>
       </Container>
