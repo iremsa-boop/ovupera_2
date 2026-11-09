@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { companyFacts, footerColumns, phoneHref, site } from "@/lib/site";
 import { Container } from "@/components/ui";
@@ -40,6 +41,16 @@ export function Footer() {
                 ))}
               </dl>
             )}
+            <div className="mt-8">
+              <Image
+                src="/images/titck-logo-white.png"
+                alt="T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu"
+                width={594}
+                height={190}
+                sizes="220px"
+                className="h-auto w-[200px] sm:w-[220px]"
+              />
+            </div>
           </div>
 
           {footerColumns.map((col) => (
