@@ -37,7 +37,7 @@ Miyo-inositol, polikistik over sendromu (PCOS) olan kadınlarda pek çok klinik 
 - Oosit ve embriyo kalitesini artırdığı,
 - İnsülin duyarlılığını artıran ajanlara kıyasla gebelik oranlarının benzer ya da daha iyi olduğu,
 - Fertilizasyon oranlarını artırdığı,
-- Klinik gebelik ve canlı doğumla sonuçlanma oranlarının daha yüksek olduğu,
+- Klinik gebelik ve canlı doğum oranlarında olumlu yönde bir eğilim olduğu (ancak 2018 tarihli Cochrane derlemesine göre bu sonuç henüz kesin değildir; ayrıntılar için [Cochrane derlemesi yazımıza](/blog/miyo-inositol-pcos-cochrane) bakabilirsiniz),
 - Ovaryan hiperstimülasyon sendromu (OHSS) riskini azalttığı
 
 bildirilmiştir. Çalışmalarda genel olarak iyi tolere edildiği ve yan etkilerin oldukça az görüldüğü belirtilmiştir.
