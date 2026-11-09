@@ -41,14 +41,22 @@ export function Footer() {
                 ))}
               </dl>
             )}
-            <div className="mt-7 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-5 sm:mt-8">
               <Image
                 src="/images/titck-logo-white.png"
                 alt="T.C. Sağlık Bakanlığı Türkiye İlaç ve Tıbbi Cihaz Kurumu"
                 width={594}
                 height={190}
                 sizes="220px"
-                className="h-auto w-[170px] sm:w-[220px]"
+                className="h-auto w-[150px] sm:w-[200px]"
+              />
+              <Image
+                src="/images/tarim-bakanligi-logo-white.png"
+                alt="T.C. Tarım ve Orman Bakanlığı"
+                width={564}
+                height={190}
+                sizes="200px"
+                className="h-auto w-[142px] sm:w-[190px]"
               />
             </div>
           </div>
