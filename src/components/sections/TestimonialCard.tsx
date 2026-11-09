@@ -13,12 +13,7 @@ const initials = (name: string) =>
 
 export function TestimonialCard({ testimonial: t, className }: { testimonial: Testimonial; className?: string }) {
   return (
-    <article className={cn("relative flex flex-col rounded-xl bg-white p-6 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.45)]", className)}>
-      {t.sample && (
-        <span className="absolute right-4 top-4 rounded-full bg-blush-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-plum-700">
-          Örnek
-        </span>
-      )}
+    <article className={cn("flex flex-col rounded-xl bg-white p-6 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.45)]", className)}>
       <div className="flex items-center gap-4">
         <span className="relative grid size-14 shrink-0 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-plum-600 to-plum-900 text-base font-medium text-white">
           {t.photo ? <Img src={t.photo} alt="" fill sizes="56px" className="object-cover" /> : initials(t.name)}

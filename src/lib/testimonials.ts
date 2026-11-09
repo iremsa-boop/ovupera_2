@@ -59,7 +59,7 @@ export const testimonials: Testimonial[] = [
 export const publishedTestimonials = testimonials.filter((t) => !t.sample);
 
 /**
- * Yalnızca yerel geliştirmede (npm run dev) tasarımı görmek için örnekler de gösterilir, "Örnek" etiketiyle.
+ * Yalnızca yerel geliştirmede (npm run dev) tasarımı görmek için örnekler de gösterilir.
  * Canlı sitede (production build) hiçbir zaman örnek yorum yayınlanmaz.
  */
 export const displayedTestimonials =

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { companyFacts, footerColumns, phoneHref, site, socialLinks } from "@/lib/site";
+import { companyFacts, footerColumns, phoneHref, site } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <footer className="bg-plum-900 text-blush-200">
       <Container className="pb-10 pt-16">
-        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[2fr_1fr_1fr]">
           <div>
             <Logo light className="text-2xl" />
             <address className="mt-10 space-y-3 not-italic">
@@ -56,19 +56,6 @@ export function Footer() {
               </ul>
             </div>
           ))}
-
-          <div>
-            <p className={heading}>Sosyal Medya</p>
-            <ul className="mt-6 space-y-3">
-              {socialLinks.map((s) => (
-                <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noreferrer" className={link}>
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <p className="mt-16 text-center text-sm text-blush-300/80">
