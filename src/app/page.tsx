@@ -22,7 +22,7 @@ export default function HomePage() {
       <Testimonials />
 
       {posts.length > 0 && (
-        <section className="border-t border-blush-200 py-20 sm:py-24">
+        <section className="py-20 sm:py-24">
           <Container>
             <SectionHeading eyebrow="Blog" title="Bilgiyle güçlenen yolculuk" align="left" />
             <div className="mt-12">

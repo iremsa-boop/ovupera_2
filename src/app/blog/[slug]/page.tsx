@@ -60,7 +60,7 @@ export default async function PostPage({ params }: Params) {
       </article>
 
       {related.length > 0 && (
-        <section className="mt-24 border-t border-blush-200 py-20">
+        <section className="mt-12 py-20">
           <Container>
             <SectionHeading title="Diğer yazılar" align="left" />
             <div className="mt-10">
