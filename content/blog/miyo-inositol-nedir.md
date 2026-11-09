@@ -2,7 +2,7 @@
 title: "Formülün merkezindeki bileşen: Miyo-inositol nedir?"
 excerpt: "İnositolün doğada en yaygın formu olan miyo-inositol neden Ovupera formülünün merkezinde yer alıyor?"
 date: "2026-10-28"
-cover: "/images/kutu-saset.jpg"
+cover: "/images/miyo-inositol-kapak.jpg"
 thumb: "/images/miyo-inositol-v3.jpg"
 category: "Bileşenler"
 ---
