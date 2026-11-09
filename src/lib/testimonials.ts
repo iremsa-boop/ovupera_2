@@ -13,6 +13,14 @@ export type Testimonial = {
 
 // TODO: Örnek yorumları, izni alınmış gerçek kullanıcı yorumlarıyla değiştirin.
 export const testimonials: Testimonial[] = [
+  // Gerçek kullanıcı yorumu; yayın izni alındı (9 Kasım 2026)
+  {
+    name: "Derya D.",
+    meta: "İstanbul",
+    text: "Tadını çok beğendim. Daha kolay adet oluyorum; saçım, yüzüm ve cildim güzelleşti.",
+    rating: 5,
+    date: "2026-11-09",
+  },
   {
     name: "Ayşe K.",
     meta: "İstanbul",
