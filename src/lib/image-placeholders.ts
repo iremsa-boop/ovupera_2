@@ -12,7 +12,6 @@ export const imagePlaceholders: Record<string, { w: number; h: number; blur: str
   "/images/miyo-inositol-v2.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoNABAAA4BaJZwAAp1ZMzkfAmAA/vcg4tXnFKTVUpVrPaUcKKfmD1LizjREHj6XyoA0UcgCZzk+vRG2UZFAAA==" },
   "/images/uretim-kaplama-v2.jpg": { w: 944, h: 765, blur: "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAA0AA4BaJYwAAtAeOb1OXAAA/IoDSq3xO1uk+lkn6rFnWeX9J7iyzfnMcRCrmRXlCHM1iypEpAfqe14Xf6XMOp0FgWkme/YfSoBzNxyAAA==" },
   "/images/uretim-monodoz-v2.jpg": { w: 1192, h: 562, blur: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAgAA4BaJZwAAthviorUAAD+xZ3k11InkluXa1Bwn6etF8eGhVAP6zZg02I0zXoQ/qG1IfRkyTgmcMbFFyAA" },
-  "/images/uretim-saset-dolum-v2-small.png": { w: 330, h: 227, blur: "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAQCdASoQAAsAA4BaJbAC7ADg9pQAAP7tsS1xNpOHEr3RbRO8pnA7cTI0L4BNFdj7qiFdJQ47flWc/U2q6IV3an/6twpsrL8LnPfqdSe4F1Vf57fyuh3+xJQwbgAA" },
-  "/images/uretim-saset-dolum-v2.jpg": { w: 1087, h: 747, blur: "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQAAsAA4BaJbAAAmej4lhZgAD+7bEtcTaTiJOle6FfNIXhr4TsnJuR2kM7K4h/buXTltSh30Jh37Ju8Sx0D+epGkBIgMnX+AaOS2sZat/+PP7tVs/9iSFwAAA=" },
+  "/images/uretim-saset-dolum-v3.jpg": { w: 1087, h: 747, blur: "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoQAAsAA4BaJbAAAmd8dBbfbkAA/u2xLXE2k4iTpXuhXzSF6LNV7qC2g9ZmlrcLCq16AZ0e8SfSkZt5pwGh3UtjiUvzzjehK93rVRXxGYKf/jz+7VbP/YkhcAA=" },
   "/images/uretim-shrink-v2.jpg": { w: 944, h: 730, blur: "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAwAA4BaJZgC7AEPRzJJFn0KgAD+397U27uE5tS3EolTyfpt58yZqs/OTkhP0NFD/uYm1aVaskJmU3QWGJ0mcrJl+AWlFXrksJyOaAAAAA==" },
 };

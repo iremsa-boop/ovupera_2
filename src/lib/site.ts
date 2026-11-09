@@ -36,10 +36,13 @@ export const site = {
 /** tel: bağlantısı için uluslararası biçim (0501… → +90501…) */
 export const phoneHref = `tel:+90${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}`;
 
-/** wa.me bağlantısı (0501… → 90501…), hazır mesajla */
-export const whatsappHref = site.contact.whatsapp
-  ? `https://wa.me/90${site.contact.whatsapp.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent(site.contact.whatsappMessage)}`
-  : "";
+/** wa.me bağlantısı (0501… → 90501…), hazır mesajla; numara yoksa boş */
+export const whatsappLink = (message: string) =>
+  site.contact.whatsapp
+    ? `https://wa.me/90${site.contact.whatsapp.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent(message)}`
+    : "";
+
+export const whatsappHref = whatsappLink(site.contact.whatsappMessage);
 
 /** Footer ve ürün sayfasında gösterilen, doldurulmuş şirket bilgileri */
 export const companyFacts = [

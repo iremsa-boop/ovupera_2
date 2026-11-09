@@ -160,7 +160,7 @@ export const benefitHighlights: { title: string; text: string; nutrients: string
 ];
 
 export const productionImages = [
-  { src: "/images/uretim-saset-dolum-v2.jpg", alt: "Saşe dolum hattı" },
+  { src: "/images/uretim-saset-dolum-v3.jpg", alt: "Saşe dolum hattı" },
   { src: "/images/uretim-monodoz-v2.jpg", alt: "Monodoz paketleme hattı" },
   { src: "/images/uretim-shrink-v2.jpg", alt: "Otomatik shrink paketleme" },
   { src: "/images/uretim-kaplama-v2.jpg", alt: "Tablet kaplama ünitesi" },
