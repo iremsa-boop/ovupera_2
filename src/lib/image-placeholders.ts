@@ -1,8 +1,9 @@
 // Otomatik üretildi: npm run images. Elle düzenlemeyin.
 export const imagePlaceholders: Record<string, { w: number; h: number; blur: string }> = {
+  "/images/brd-kapak.jpg": { w: 1584, h: 990, blur: "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAoAA4BaJaWDrAGIAAD+89RS+DKf5RmLWKbognZ2U0r8JluQiWmAAAA=" },
   "/images/brd-v3.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoNABAAA4BaJZwAAu1/OJPkgAD+9/Bcb6/QI5Glmwm8TaODELzwOrqAKAA=" },
-  "/images/cochrane-kapak.jpg": { w: 1448, h: 1086, blur: "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAQCdASoQAAwAA4BaJbACdAYwTcngAAD+4kvJo4/i+j/KyJtN2YrPawhOZaOIFJrhN4EWcypERFJh3abe3T6mhr/Su5nQAGNbs7K27XJPzyl6RTzFnOEAku95X9o4m88CTOtKtKAAAA==" },
-  "/images/cochrane-thumb-v2.jpg": { w: 869, h: 1086, blur: "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQAgCdASoNABAAA4BaJbACdADdhzq++GUAAP4FTYJmz7yza+rIPBV0ypQFwZRp14kYO4LhGYs16qjsqYJayc6lMFwJNNac9M77Cy8WvwG2TZRu4RORxSSUnhaH2X2e736RIIT+O7lm0iyfqjgAAA==" },
+  "/images/cochrane-kapak.jpg": { w: 1448, h: 1086, blur: "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAQCdASoQAAwAA4BaJbACdADhK1hAgAAA/uJLyilV0X0koV0XbXov6AST5KZxkGW5HaRfTlR2YPM+DkoqPwlrlNNqZ/Fda79+hR20Q0Mhcyie2/PulJtPVD2yDA9yxN54EmdaVaUAAA==" },
+  "/images/cochrane-thumb-v2.jpg": { w: 869, h: 1086, blur: "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoNABAAA4BaJbACdADdliBDICFyAP4FTYJmz7yza+rIPBV0ypQFwZRp14iyzob6d9t8PHQfDNpgRRINXIBJgXl++A6gfdkReiz5vvHMzPHqVGXw6NmlH6RIITfqjS3XNg/sEAAA" },
   "/images/folat-v2.jpg": { w: 1280, h: 1600, blur: "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoNABAAA4BaJQAAXO9DCigsuoAA/vYP99xUvC27kqIfiTZbl76rEZ+Li9gJq/XW2ZoR7ROu8GIbJbQA" },
   "/images/hakkimizda-cift.jpg": { w: 1556, h: 1357, blur: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQAgCdASoQAA4AA4BaJZgCdAYsZN3I8BgAAP7KJq9tO7fn3Szcy4SqexWJWV5nScDhq8LB5655FvdIImGZTVUm+SDa6qcYCD76rqOq41isJhtqkTIGLbSJ6hj5oDpjHmWnRbpSLrBDjBByr0LEYsw0ZGYZy8AA" },
   "/images/hero-cift.jpg": { w: 1615, h: 1358, blur: "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQAgCdASoQAA0AA4BaJZgCdAD7Zj2hi9MAAP7YZdLJH81hRp0KIzTVegTtKypV7jaJoDquwVkD7OSi76hgpYct7FSGnTvZ2LluoeQvdg9AwyJLJAEPwXC/1d3Sr2F+yj4alLkeIxQXu7pneFmgAA==" },
