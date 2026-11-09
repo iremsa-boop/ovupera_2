@@ -4,7 +4,7 @@ import { Container } from "@/components/ui";
 import { TestimonialCard } from "./TestimonialCard";
 import { TestimonialsRail } from "./TestimonialsRail";
 
-const title = "Yolculuğu paylaşanlar";
+const title = "Kullanıcı yorumları";
 const subtitle = "Ovupera'yı günlük rutinine katan kullanıcılarımızın deneyimleri.";
 
 /** Koyu mürdüm bant: renkli arka plan, sol üstte başlık, sağda oklar, altında beyaz yorum kartları */

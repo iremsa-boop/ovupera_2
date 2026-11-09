@@ -6,7 +6,6 @@ export function UsageSteps() {
     <section id="kullanim" className="scroll-mt-20 py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Kullanım önerisi"
           title={
             <>
               Günde bir saşe, <em className="text-plum-700">kendinize ayırdığınız an.</em>
@@ -16,8 +15,8 @@ export function UsageSteps() {
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {usageSteps.map((s) => (
             <div key={s.step} className="px-6 text-center">
-              <p className="font-serif text-3xl text-plum-700">{s.step}</p>
-              <p className="mt-3 font-medium text-plum-950">{s.title}</p>
+              <p className="font-serif text-5xl text-plum-700 sm:text-6xl">{s.step}</p>
+              <p className="mt-4 font-medium text-plum-950">{s.title}</p>
               <p className="mt-1 text-sm text-muted">{s.text}</p>
             </div>
           ))}
