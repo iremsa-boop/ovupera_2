@@ -22,6 +22,14 @@ export function Button({ variant = "primary", className, children, ...rest }: Pr
     className,
   );
   if (rest.href !== undefined) {
+    // Dış bağlantılar (WhatsApp vb.) yeni sekmede açılır
+    if (/^https?:/.test(rest.href)) {
+      return (
+        <a href={rest.href} target="_blank" rel="noreferrer" className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={rest.href} className={classes}>
         {children}

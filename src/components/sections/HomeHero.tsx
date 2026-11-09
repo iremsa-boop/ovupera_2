@@ -1,5 +1,6 @@
 import { Img } from "@/components/ui/Img";
 import { Button, Container } from "@/components/ui";
+import { whatsappHref } from "@/lib/site";
 
 const trustPoints = ["22 bileşen", "Günde 1 saşe", "Aktif folat ve B12"];
 
@@ -36,8 +37,8 @@ export function HomeHero() {
           Aşılama ve tüp bebek süreçleri öncesinde hücresel enerjiyi desteklemek için 22 bileşen bir arada.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Button href="/urun" variant="light">
-            Ürünü inceleyin
+          <Button href={whatsappHref} variant="light">
+            Satın almak için tıklayın
           </Button>
         </div>
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75">
