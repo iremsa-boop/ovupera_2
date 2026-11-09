@@ -3,6 +3,7 @@ title: "L-Karnitin nedir? Hücresel enerjideki rolü"
 excerpt: "Hücrenin enerji santrali mitokondriye yakıt taşıyan L-Karnitin'i ve tüp bebek laboratuvarındaki ilginç bir araştırmayı yakından tanıyalım."
 date: "2026-11-09"
 cover: "/images/kutu-arka.jpg"
+thumb: "/images/l-karnitin-thumb.jpg"
 category: "Bileşenler"
 ---
 

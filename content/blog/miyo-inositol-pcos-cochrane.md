@@ -3,6 +3,7 @@ title: "Miyo-inositol ve PCOS: Cochrane derlemesi ne söylüyor?"
 excerpt: "13 randomize kontrollü çalışmayı ve 1472 kadını kapsayan Cochrane derlemesinin bulgularını sade bir dille özetliyoruz."
 date: "2026-11-09"
 cover: "/images/kutu-formul.jpg"
+thumb: "/images/cochrane-thumb.jpg"
 category: "Bilim"
 ---
 

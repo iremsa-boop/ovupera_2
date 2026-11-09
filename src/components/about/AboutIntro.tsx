@@ -2,7 +2,7 @@ import { Img } from "@/components/ui/Img";
 import { aboutIntro } from "@/lib/about";
 import { Container } from "@/components/ui";
 
-/** Hakkımızda girişi: iki tonlu başlık + kısa metin, altında küçük/büyük fotoğraf ikilisi */
+/** Hakkımızda girişi: iki tonlu başlık + kısa metin, altında geniş fotoğraf */
 export function AboutIntro() {
   const { titleLead, titleAccent, text } = aboutIntro;
 
@@ -18,27 +18,15 @@ export function AboutIntro() {
           <p className="text-lg leading-relaxed text-muted md:pb-2">{text}</p>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-[1fr_2.2fr]">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:aspect-auto">
-            <Img
-              src="/images/hakkimizda-ofis.jpg"
-              alt="Ofiste Ovupera içen bir kadın"
-              fill
-              priority
-              sizes="(min-width: 768px) 32vw, 100vw"
-              className="object-cover object-[35%_50%]"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl md:aspect-[16/10]">
-            <Img
-              src="/images/hakkimizda-cift.jpg"
-              alt="Kahvaltı masasında gülen bir çift"
-              fill
-              priority
-              sizes="(min-width: 768px) 66vw, 100vw"
-              className="object-cover object-[50%_40%]"
-            />
-          </div>
+        <div className="relative mt-14 aspect-[4/3] overflow-hidden rounded-2xl md:aspect-[21/9]">
+          <Img
+            src="/images/hakkimizda-cift.jpg"
+            alt="Kahvaltı masasında gülen bir çift"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[50%_40%]"
+          />
         </div>
       </Container>
     </section>

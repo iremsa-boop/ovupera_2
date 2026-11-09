@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { PostMeta } from "@/lib/blog";
 import { Img } from "@/components/ui/Img";
 
-/** Ana sayfa blog modülü: yalnızca dikey görsel; başlık erişilebilirlik için aria-label'da */
+/** Ana sayfa blog modülü: dikey görsel, altında kategori ve başlık */
 function PostTeaser({ post }: { post: PostMeta }) {
   return (
-    <Link href={`/blog/${post.slug}`} aria-label={post.title} className="group block">
+    <Link href={`/blog/${post.slug}`} className="group block">
       <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-blush-100">
         <Img
           src={post.thumb}
@@ -15,6 +15,10 @@ function PostTeaser({ post }: { post: PostMeta }) {
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
+      <p className="mt-5 text-xs font-medium uppercase tracking-[0.2em] text-plum-600">{post.category}</p>
+      <h3 className="mt-2 font-serif text-2xl leading-snug text-plum-950 transition-colors group-hover:text-plum-700">
+        {post.title}
+      </h3>
     </Link>
   );
 }
