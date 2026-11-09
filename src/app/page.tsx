@@ -10,7 +10,10 @@ import {
 } from "@/components/sections";
 
 export default function HomePage() {
-  const posts = getAllPosts().slice(0, 3);
+  // Ana sayfada gösterilecek yazılar (sırasıyla)
+  const homeSlugs = ["miyo-inositol-pcos-cochrane", "l-karnitin-nedir", "aktif-folat-ve-b12"];
+  const all = getAllPosts();
+  const posts = homeSlugs.map((s) => all.find((p) => p.slug === s)).filter((p) => p !== undefined);
 
   return (
     <>
