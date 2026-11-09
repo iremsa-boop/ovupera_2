@@ -3,8 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
 import { formatDate } from "@/lib/utils";
-import { PostGrid } from "@/components/blog/PostGrid";
-import { Container, SectionHeading } from "@/components/ui";
+import { Container } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -26,10 +25,6 @@ export default async function PostPage({ params }: Params) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-
-  const related = getAllPosts()
-    .filter((p) => p.slug !== slug)
-    .slice(0, 3);
 
   return (
     <>
@@ -54,21 +49,10 @@ export default async function PostPage({ params }: Params) {
             <p className="mt-5 text-lg leading-relaxed text-muted">{post.excerpt}</p>
           </Container>
         </header>
-        <Container className="max-w-3xl">
+        <Container className="max-w-3xl pb-24">
           <div className="prose-ovupera" dangerouslySetInnerHTML={{ __html: post.html }} />
         </Container>
       </article>
-
-      {related.length > 0 && (
-        <section className="mt-12 py-20">
-          <Container>
-            <SectionHeading title="Diğer yazılar" align="left" />
-            <div className="mt-10">
-              <PostGrid posts={related} />
-            </div>
-          </Container>
-        </section>
-      )}
     </>
   );
 }
