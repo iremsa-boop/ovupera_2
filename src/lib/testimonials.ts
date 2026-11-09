@@ -2,6 +2,8 @@ export type Testimonial = {
   name: string;
   /** Örn. "İstanbul" veya "34 yaş" */
   meta?: string;
+  /** İsteğe bağlı, izinli profil fotoğrafı (örn. /images/yorum-ayse.jpg); yoksa baş harfler gösterilir */
+  photo?: string;
   text: string;
   rating: 1 | 2 | 3 | 4 | 5;
   date: string;
@@ -55,3 +57,10 @@ export const testimonials: Testimonial[] = [
 
 /** Sitede gösterilen yorumlar: örnek (sample) olanlar yayında görünmez */
 export const publishedTestimonials = testimonials.filter((t) => !t.sample);
+
+/**
+ * Yalnızca yerel geliştirmede (npm run dev) tasarımı görmek için örnekler de gösterilir, "Örnek" etiketiyle.
+ * Canlı sitede (production build) hiçbir zaman örnek yorum yayınlanmaz.
+ */
+export const displayedTestimonials =
+  process.env.NODE_ENV === "development" ? testimonials : publishedTestimonials;
