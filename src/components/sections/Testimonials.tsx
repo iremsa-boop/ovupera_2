@@ -61,7 +61,7 @@ export async function Testimonials() {
       </TestimonialsRail>
       <Container className="mt-6 flex flex-col items-start gap-6">
         <WriteReview />
-        <p className="max-w-3xl text-xs leading-relaxed text-white/60">
+        <p className="mx-auto max-w-3xl self-center text-center text-xs leading-relaxed text-white/60">
           Yorumlar kullanıcılarımızın kişisel deneyimleridir; herkes için aynı sonucu göstermez. {supplementWarning}
         </p>
       </Container>
