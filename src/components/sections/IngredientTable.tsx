@@ -15,7 +15,7 @@ export function IngredientTable() {
             <p className="mt-2 font-serif text-4xl text-plum-800">{items.length}</p>
             <ul className="mt-4">
               {items.map((i) => (
-                <li key={i.name} className="flex items-baseline justify-between border-b border-blush-200 py-3">
+                <li key={i.name} className="flex items-baseline justify-between py-1.5">
                   <span className="text-ink">{i.name}</span>
                   {i.amount && <span className="text-sm text-muted">{i.amount}</span>}
                 </li>

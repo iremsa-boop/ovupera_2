@@ -5,9 +5,9 @@ type Props = {
 /** JS gerektirmeyen akordeon (details/summary) */
 export function FaqAccordion({ items }: Props) {
   return (
-    <div className="divide-y divide-blush-200 border-y border-blush-200">
+    <div>
       {items.map((item) => (
-        <details key={item.q} className="group py-5">
+        <details key={item.q} className="group py-3">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-lg text-plum-900 [&::-webkit-details-marker]:hidden">
             {item.q}
             <span className="grid size-8 shrink-0 place-items-center rounded-full border border-blush-200 text-plum-700 transition group-open:rotate-45">

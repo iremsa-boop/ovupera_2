@@ -62,16 +62,16 @@ export function Footer() {
           </div>
 
           {/* Mobil: açılır kapanır başlıklar */}
-          <div className="divide-y divide-white/10 border-y border-white/10 lg:hidden">
+          <div className="lg:hidden">
             {footerColumns.map((col) => (
               <details key={col.title} className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between py-4 [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-3 [&::-webkit-details-marker]:hidden">
                   <span className={heading}>{col.title}</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blush-300 transition-transform group-open:rotate-180" aria-hidden>
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </summary>
-                <ul className="space-y-2.5 pb-5">
+                <ul className="space-y-2.5 pb-4">
                   {col.links.map((l) => (
                     <li key={l.href}>
                       <Link href={l.href} className={link}>
