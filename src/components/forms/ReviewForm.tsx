@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { site, whatsappLink } from "@/lib/site";
-import { cn } from "@/lib/utils";
 
 const field =
   "w-full rounded-xl border border-plum-900/15 bg-white px-4 py-3 text-[15px] text-ink outline-none transition placeholder:text-muted/60 focus:border-plum-600 focus:ring-4 focus:ring-plum-600/10";
@@ -16,7 +15,6 @@ type Status = "idle" | "sending" | "sent" | "error";
  * site.forms.reviewEndpoint tanımlıysa oraya gönderilir, değilse WhatsApp hattına mesaj olarak gider.
  */
 export function ReviewForm({ onDone }: { onDone?: () => void }) {
-  const [rating, setRating] = useState(0);
   const [status, setStatus] = useState<Status>("idle");
   const endpoint = site.forms.reviewEndpoint;
 
@@ -24,7 +22,6 @@ export function ReviewForm({ onDone }: { onDone?: () => void }) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    data.set("rating", String(rating));
 
     if (!endpoint) {
       const name = String(data.get("name") || "").trim() || "Belirtilmedi";
@@ -36,12 +33,10 @@ export function ReviewForm({ onDone }: { onDone?: () => void }) {
         "",
         `Ad: ${name}`,
         `Şehir: ${city}`,
-        `Puan: ${rating ? `${rating}/5` : "Belirtilmedi"}`,
         "Yorumumun sitede yayınlanmasına izin veriyorum.",
       ];
       window.open(whatsappLink(lines.join("\n")), "_blank", "noopener");
       form.reset();
-      setRating(0);
       setStatus("sent");
       return;
     }
@@ -51,7 +46,6 @@ export function ReviewForm({ onDone }: { onDone?: () => void }) {
       const res = await fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error(String(res.status));
       form.reset();
-      setRating(0);
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -76,26 +70,6 @@ export function ReviewForm({ onDone }: { onDone?: () => void }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div>
-        <span className={label}>Puanınız</span>
-        <div className="flex gap-1" role="radiogroup" aria-label="Puanınız">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <button
-              key={n}
-              type="button"
-              role="radio"
-              aria-checked={rating === n}
-              aria-label={`${n} yıldız`}
-              onClick={() => setRating(n)}
-              className={cn("transition", n <= rating ? "text-[#E7B13B]" : "text-plum-900/20 hover:text-[#E7B13B]/60")}
-            >
-              <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
-                <path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" />
-              </svg>
-            </button>
-          ))}
-        </div>
-      </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
           <span className={label}>
