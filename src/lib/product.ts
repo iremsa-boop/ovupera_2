@@ -37,9 +37,9 @@ export const ingredients: Ingredient[] = [
     amount: "2 mg",
     source: "Haematococcus pluvialis alginden elde edilir.",
   },
-  { name: "Betain", group: "ozel" },
-  { name: "PABA", group: "ozel" },
-  { name: "Beta Karoten", group: "ozel" },
+  { name: "Betain", group: "ozel", amount: "200 mg" },
+  { name: "PABA", group: "ozel", amount: "32 mg", detail: "Para-aminobenzoik asit" },
+  { name: "Beta Karoten", group: "ozel", amount: "5 mg" },
   {
     name: "C Vitamini",
     group: "vitamin",
@@ -57,14 +57,15 @@ export const ingredients: Ingredient[] = [
     name: "E Vitamini",
     group: "vitamin",
     amount: "100 mg α-TE",
+    brd: "%833",
     detail: "Tokoferol",
     claims: ["Hücrelerin oksidatif strese karşı korunmasına katkıda bulunur."],
     source: "Bitkisel yağlar, fındık, badem ve tohumlar E vitamininin doğal kaynaklarındandır.",
   },
-  { name: "B1 Vitamini", group: "vitamin" },
-  { name: "B2 Vitamini", group: "vitamin" },
-  { name: "B3 Vitamini", group: "vitamin" },
-  { name: "B5 Vitamini", group: "vitamin" },
+  { name: "B1 Vitamini", group: "vitamin", amount: "5 mg", detail: "Tiamin", brd: "%455" },
+  { name: "B2 Vitamini", group: "vitamin", amount: "3 mg", detail: "Riboflavin", brd: "%214" },
+  { name: "B3 Vitamini", group: "vitamin", amount: "18 mg NE", detail: "Niasin", brd: "%113" },
+  { name: "B5 Vitamini", group: "vitamin", amount: "8 mg", detail: "Pantotenik asit", brd: "%133" },
   {
     name: "B6 Vitamini",
     group: "vitamin",
@@ -94,6 +95,7 @@ export const ingredients: Ingredient[] = [
     group: "vitamin",
     amount: "10 µg",
     detail: "Aktif B12 · Metilkobalamin (MecobalActive®)",
+    brd: "%400",
     claims: [
       "Hücre bölünmesi sürecinde görev alır.",
       "Yorgunluk ve bitkinliğin azalmasına katkıda bulunur.",
@@ -104,6 +106,7 @@ export const ingredients: Ingredient[] = [
     group: "vitamin",
     amount: "25 µg",
     detail: "Kolekalsiferol",
+    brd: "%500",
     claims: [
       "Bağışıklık sisteminin normal fonksiyonuna katkıda bulunur.",
       "Hücre bölünmesi sürecinde görev alır.",
@@ -113,12 +116,14 @@ export const ingredients: Ingredient[] = [
     name: "Çinko",
     group: "mineral",
     amount: "15 mg",
+    brd: "%150",
     claims: ["Normal doğurganlık ve üremeye katkıda bulunur."],
   },
   {
     name: "Selenyum",
     group: "mineral",
     amount: "100 µg",
+    brd: "%182",
     claims: ["Hücrelerin oksidatif strese karşı korunmasına katkıda bulunur."],
   },
 ];
@@ -140,7 +145,6 @@ export const productionImages = [
   { src: "/images/uretim-saset-dolum-v3.jpg", alt: "Saşe dolum hattı" },
   { src: "/images/uretim-monodoz-v2.jpg", alt: "Monodoz paketleme hattı" },
   { src: "/images/uretim-shrink-v2.jpg", alt: "Otomatik shrink paketleme" },
-  { src: "/images/uretim-kaplama-v2.jpg", alt: "Tablet kaplama ünitesi" },
 ] as const;
 
 export const productFaq = [

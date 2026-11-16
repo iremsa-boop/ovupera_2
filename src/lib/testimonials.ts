@@ -13,9 +13,8 @@ export type Testimonial = {
 };
 
 /**
- * Müşteriden (Acvision) 12 Kasım 2026'da iletilen kullanıcı yorumları.
- * Yazım hataları düzeltildi, doktor adları çıkarıldı. Soru, şikâyet ve
- * takviye edici gıda mevzuatına aykırı sağlık/sonuç iddiası içeren mesajlar eklenmedi.
+ * Müşteriden (Acvision) 12 Kasım 2026'da iletilen, müşterinin onayladığı kullanıcı yorumları.
+ * Yalnızca yazım hataları düzeltildi.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -26,6 +25,9 @@ export const testimonials: Testimonial[] = [
   },
   {
     text: "Ovupera'nın içeriğini çok beğendim. Özellikle folik asit de içermesi benim için büyük avantaj. Gebelik planlama sürecinde ihtiyaç duyulan vitaminleri bir arada sunması çok güzel. Böylece ekstra folik asit kullanma ihtiyacını da ürünün içeriğine göre doktorumla değerlendirebiliyorum. Kadın sağlığını ve gebelik hazırlığını desteklemek isteyenler için güzel bir alternatif. 🌸",
+  },
+  {
+    text: "İçeriğindeki vitamin ve minerallerin çeşitliliği çok güzel. Özellikle yumurtalık sağlığını ve yumurtlama sürecini desteklemeye yönelik olması benim için büyük artı. 🌸",
   },
   {
     text: "Enerji metabolizmamı desteklemesi çok hoşuma gitti. Günlük hayatımda kendimi daha zinde hissetmek için güzel bir vitamin desteği.",
@@ -44,7 +46,10 @@ export const testimonials: Testimonial[] = [
   },
   {
     meta: "Almanya",
-    text: "Keşke Almanya'da da olsa! 3 kutu birden götürdüm, tekrar kontrole geldiğimde yine stok yapacağım. Doktorum, sizi seviyorum, bu işi birlikte başaracağız. Almanya'ya 3 kişi döneceğiz.",
+    text: "Keşke Almanya'da da olsa! 3 kutu birden götürdüm, tekrar kontrole geldiğimde yine stok yapacağım. Doktorum Nagehan, sizi seviyorum, bu işi birlikte başaracağız. Almanya'ya 3 kişi döneceğiz.",
+  },
+  {
+    text: "Şehir hastanesinden doktorum reçete etti. Çok güveniyorum, yorumumu güncelleyeceğim.",
   },
   {
     meta: "Kars",
@@ -65,6 +70,21 @@ export const testimonials: Testimonial[] = [
     text: "Kutum hasarlı ulaştı, Aslı Hanım sağ olsun hemen ilgilendi.",
   },
   {
+    text: "Kargocu kapıma bırakıp gitmiş. Ya başkası alsaydı ve ben tedavime başlayamasaydım? 1 gün bile kıymetli, kargoyu uyarın.",
+  },
+  {
+    text: "Keşke 2. alımda indiriminiz olsa.",
+  },
+  {
+    text: "Erkekler de kullanabilir mi? Eşime de içirsem olur mu?",
+  },
+  {
+    text: "Libido artışı sağladı, çok mutluyum.",
+  },
+  {
+    text: "Bu üründen mi bilmiyorum, ilişkilerim hep ağrılı oluyordu ama şu an çok daha rahat hissediyorum.",
+  },
+  {
     meta: "Konya",
     text: "Günlük yaşamda vücudumun ihtiyaç duyduğu vitamin ve mineralleri bir arada sunması çok hoşuma gidiyor. Vitaminleri araştırırken bu ürün karşıma çıktı; doktora danışıp aldım. Konya'ya iki günde geldi.",
   },
@@ -81,7 +101,16 @@ export const testimonials: Testimonial[] = [
     text: "Aşılama öncesi doktorum önerdi. İnşallah sonradan güzel haber yazarım.",
   },
   {
-    text: "Kendimi daha dinç hissediyorum.",
+    text: "Doktorum önerdiği için başlamıştım. Şimdi ilk kontrolden çıktım ve doktorum daha çok yumurta gördüğünü söyledi. Çok mutluyum, devam edeceğim.",
+  },
+  {
+    text: "Doktorum iyi kalitedeki embriyo sayımın arttığını söyledi, çok mutluyum. Bir an önce sonuç almak istiyorum.",
+  },
+  {
+    text: "PCOS olduğumu duyunca ağlamıştım, tüp bebeksiz çocuğun olmaz demişlerdi. Ama Allah Doktor Murat Bey'den razı olsun. Ovupera sayesinde mutlu haberi aldım.",
+  },
+  {
+    text: "Kendimi daha dinç hissediyorum. Doktorum bu üründen olabilir, içeriği çok zengin dedi.",
   },
   {
     meta: "Azerbaycan",

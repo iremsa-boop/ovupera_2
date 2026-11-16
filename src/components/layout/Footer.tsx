@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { companyFacts, footerColumns, phoneHref, site } from "@/lib/site";
+import { companyFacts, footerColumns, phoneHref, site, supplementWarning } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { Logo } from "./Logo";
 
@@ -101,7 +101,9 @@ export function Footer() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-blush-300/80 sm:mt-16 sm:text-center sm:text-sm">
+        <p className="mt-8 text-xs leading-relaxed text-blush-200 sm:mt-14 sm:text-center">{supplementWarning}</p>
+
+        <p className="mt-4 text-xs text-blush-300/80 sm:mt-6 sm:text-center sm:text-sm">
           Copyright © {new Date().getFullYear()} - {site.name}. Tüm hakları saklıdır.
         </p>
       </Container>

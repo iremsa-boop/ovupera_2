@@ -30,6 +30,8 @@ export const site = {
   forms: {
     /** Formspree / Getform gibi bir servisin adresi. Boşken form e-posta uygulamasını açar. */
     contactEndpoint: "" as string,
+    /** Yorum formu için servis adresi (Formspree vb.). Boşken yorum WhatsApp hattına mesaj olarak gider. */
+    reviewEndpoint: "" as string,
   },
 } as const;
 
@@ -87,3 +89,7 @@ export const navigation = [
   { href: "/blog", label: "Blog" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;
+
+/** Sitenin birçok yerinde görünen kısa uyarı */
+export const supplementWarning =
+  "Uyarı: Takviye edici gıdadır, ilaç değildir. Hastalıkların önlenmesi veya tedavi edilmesi amacıyla kullanılmaz. Takviye edici gıdalar normal beslenmenin yerine geçemez.";

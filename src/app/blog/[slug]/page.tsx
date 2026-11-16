@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
 import { formatDate } from "@/lib/utils";
+import { supplementWarning } from "@/lib/site";
 import { Container } from "@/components/ui";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -51,6 +52,7 @@ export default async function PostPage({ params }: Params) {
         </header>
         <Container className="max-w-3xl pb-24">
           <div className="prose-ovupera" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <p className="mt-12 rounded-xl bg-blush-100 px-5 py-4 text-sm leading-relaxed text-plum-900">{supplementWarning}</p>
         </Container>
       </article>
     </>

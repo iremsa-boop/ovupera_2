@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Img } from "@/components/ui/Img";
 import { Card, Container, Pill, SectionHeading } from "@/components/ui";
-import { companyFacts, productDisclaimer } from "@/lib/site";
+import { companyFacts, productDisclaimer, supplementWarning } from "@/lib/site";
 import { productFaq } from "@/lib/product";
 import { FaqAccordion, IngredientTable, PageHero, Testimonials, UsageSteps } from "@/components/sections";
 
@@ -87,6 +87,7 @@ export default function ProductPage() {
           <p className="mt-6 text-center text-xs text-muted">
             Miktarlar saşe başınadır. Etikette belirtilen değerler esastır.
           </p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-xs font-medium leading-relaxed text-plum-800">{supplementWarning}</p>
         </Container>
       </section>
 

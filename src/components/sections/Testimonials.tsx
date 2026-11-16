@@ -1,8 +1,9 @@
 import { displayedTestimonials } from "@/lib/testimonials";
-import { whatsappLink } from "@/lib/site";
+import { supplementWarning, whatsappLink } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { TestimonialCard } from "./TestimonialCard";
 import { TestimonialsRail } from "./TestimonialsRail";
+import { WriteReview } from "./WriteReview";
 
 const title = "Kullanıcı yorumları";
 const subtitle = "Ovupera'yı günlük rutinine katan kullanıcılarımızın deneyimleri.";
@@ -53,6 +54,12 @@ export function Testimonials() {
           />
         ))}
       </TestimonialsRail>
+      <Container className="mt-6 flex flex-col items-start gap-6">
+        <WriteReview />
+        <p className="max-w-3xl text-xs leading-relaxed text-white/60">
+          Yorumlar kullanıcılarımızın kişisel deneyimleridir; herkes için aynı sonucu göstermez. {supplementWarning}
+        </p>
+      </Container>
     </section>
   );
 }
