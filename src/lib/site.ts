@@ -30,8 +30,6 @@ export const site = {
   forms: {
     /** Formspree / Getform gibi bir servisin adresi. Boşken form e-posta uygulamasını açar. */
     contactEndpoint: "" as string,
-    /** Yorum formu için servis adresi (Formspree vb.). Boşken yorum WhatsApp hattına mesaj olarak gider. */
-    reviewEndpoint: "" as string,
   },
 } as const;
 

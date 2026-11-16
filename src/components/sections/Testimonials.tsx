@@ -1,4 +1,5 @@
-import { displayedTestimonials } from "@/lib/testimonials";
+import { displayedTestimonials, type Testimonial } from "@/lib/testimonials";
+import { listReviews } from "@/lib/reviews-store";
 import { supplementWarning, whatsappLink } from "@/lib/site";
 import { Container } from "@/components/ui";
 import { TestimonialCard } from "./TestimonialCard";
@@ -16,8 +17,12 @@ const band =
  * Kullanıcı yorumları. Yayında yalnızca gerçek (sample olmayan) yorumlar gösterilir;
  * hiç yoksa aynı bant içinde deneyim paylaşmaya davet edilir.
  */
-export function Testimonials() {
-  if (displayedTestimonials.length === 0) {
+export async function Testimonials() {
+  // Formdan gelen yorumlar (en yenisi başta), ardından sabit yorumlar
+  const stored: Testimonial[] = (await listReviews()).map((r) => ({ name: r.name, meta: r.meta, text: r.text }));
+  const all = [...stored, ...displayedTestimonials];
+
+  if (all.length === 0) {
     const shareHref = whatsappLink("Merhaba, Ovupera deneyimimi paylaşmak istiyorum.");
     return (
       <section className={band}>
@@ -46,7 +51,7 @@ export function Testimonials() {
   return (
     <section className={band}>
       <TestimonialsRail title={title} subtitle={subtitle}>
-        {displayedTestimonials.map((t, i) => (
+        {all.map((t, i) => (
           <TestimonialCard
             key={i}
             testimonial={t}
