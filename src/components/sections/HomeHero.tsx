@@ -12,7 +12,7 @@ const trustPoints = ["22 bileşen", "Günde 1 saşe", "Aktif folat ve B12"];
 export function HomeHero() {
   return (
     <section className="relative -mt-16 overflow-hidden bg-plum-950 md:flex md:h-[72vh] md:min-h-[560px] md:max-h-[720px]">
-      <div className="absolute inset-x-0 top-0 aspect-square md:inset-y-0 md:left-auto md:aspect-auto md:w-[68%]">
+      <div className="absolute inset-x-0 top-0 aspect-[5/4] md:inset-y-0 md:left-auto md:aspect-auto md:w-[68%]">
         <Img
           src="/images/hero-cift.jpg"
           alt="Gebelik planlayan, koltukta birbirine gülümseyen bir çift"
@@ -28,7 +28,7 @@ export function HomeHero() {
       <div className="absolute inset-0 hidden bg-gradient-to-r from-plum-950 from-35% via-plum-950/70 via-55% to-transparent md:block" />
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-plum-950/60 to-transparent" />
 
-      <Container className="relative flex flex-col justify-center pb-12 pt-[calc(100vw-4.5rem)] md:pb-0 md:pt-16">
+      <Container className="relative flex flex-col justify-center pb-10 pt-[calc(80vw-4rem)] md:pb-0 md:pt-16">
         <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-blush-300 sm:text-xs sm:tracking-[0.25em]">
           Gebelik planlayan kadınlar için
           <br className="sm:hidden" /> takviye edici gıda

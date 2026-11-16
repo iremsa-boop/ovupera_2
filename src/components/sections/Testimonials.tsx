@@ -55,7 +55,7 @@ export async function Testimonials() {
           <TestimonialCard
             key={i}
             testimonial={t}
-            className="w-[82%] shrink-0 snap-start sm:w-[300px] lg:w-[320px]"
+            className="w-[72%] shrink-0 snap-start self-start sm:w-[300px] sm:self-stretch lg:w-[320px]"
           />
         ))}
       </TestimonialsRail>
