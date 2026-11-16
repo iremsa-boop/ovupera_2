@@ -45,9 +45,9 @@ export function Testimonials() {
   return (
     <section className={band}>
       <TestimonialsRail title={title} subtitle={subtitle}>
-        {displayedTestimonials.map((t) => (
+        {displayedTestimonials.map((t, i) => (
           <TestimonialCard
-            key={`${t.name}-${t.date}`}
+            key={i}
             testimonial={t}
             className="w-[82%] shrink-0 snap-start sm:w-[300px] lg:w-[320px]"
           />
