@@ -29,9 +29,9 @@ export function FormulaShowcase() {
             Tek saşede 10 özel bileşen, 10 vitamin ve 2 mineral. Miktarlar etikette olduğu gibi, açıkça.
           </p>
 
-          <dl className="mt-10 border-t border-plum-950/15">
+          <dl className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
             {featuredIngredients.map((i) => (
-              <div key={i.name} className="flex items-baseline justify-between gap-6 border-b border-plum-950/15 py-4">
+              <div key={i.name} className="flex items-baseline justify-between gap-6">
                 <dt>
                   <span className="font-serif text-lg text-plum-950 sm:text-xl">{i.name}</span>
                   {i.detail && (
