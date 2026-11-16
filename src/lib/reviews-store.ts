@@ -88,20 +88,6 @@ export async function addReview(input: Omit<StoredReview, "id" | "createdAt">): 
   return review;
 }
 
-export async function deleteReview(id: string): Promise<boolean> {
-  if (useRedis) {
-    const raw = await redis<string[]>(["LRANGE", KEY, 0, MAX - 1]);
-    const match = raw.find((r) => (JSON.parse(r) as StoredReview).id === id);
-    if (!match) return false;
-    await redis(["LREM", KEY, 1, match]);
-    return true;
-  }
-  const list = await readFile();
-  const next = list.filter((r) => r.id !== id);
-  await writeFile(next);
-  return next.length !== list.length;
-}
-
 /** Aynı adresten art arda gönderimi sınırlar (Redis'te 60 sn'de 1 yorum). Yerelde sınır yok. */
 export async function allowSubmission(ip: string): Promise<boolean> {
   if (!useRedis) return true;
