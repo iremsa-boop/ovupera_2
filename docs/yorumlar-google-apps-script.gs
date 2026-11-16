@@ -3,7 +3,7 @@
  * Google E-Tablolar > Uzantılar > Apps Komut Dosyası içine olduğu gibi yapıştırın.
  *
  * "Yorumlar" sekmesindeki her satır sitede bir yorumdur.
- * Bir yorumu kaldırmak için satırı silmeniz yeterli; site en geç 10 dakikada güncellenir.
+ * Bir yorumu kaldırmak için satırı silmeniz yeterli; site en geç 1-2 dakikada güncellenir.
  */
 const SHEET_NAME = "Yorumlar";
 const MAX_REVIEWS = 500;

@@ -33,7 +33,7 @@ export const reviewsStoreEnabled = useSheet || useFile;
 type SheetRow = { createdAt: string; name?: string; meta?: string; text: string };
 
 async function readSheet(): Promise<StoredReview[]> {
-  const res = await fetch(sheetUrl!, { next: { tags: [REVIEWS_TAG], revalidate: 600 } });
+  const res = await fetch(sheetUrl!, { next: { tags: [REVIEWS_TAG], revalidate: 60 } });
   if (!res.ok) throw new Error(`Sheet ${res.status}`);
   const json = (await res.json()) as { reviews?: SheetRow[] };
   return (json.reviews ?? []).map((r, i) => ({
