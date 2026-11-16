@@ -2,6 +2,7 @@ import type { Testimonial } from "@/lib/testimonials";
 import { cn } from "@/lib/utils";
 import { Stars } from "@/components/ui";
 import { Img } from "@/components/ui/Img";
+import { ReviewText } from "./ReviewText";
 
 const initials = (name: string) =>
   name
@@ -33,7 +34,7 @@ export function TestimonialCard({ testimonial: t, className }: { testimonial: Te
         </div>
       </div>
       {t.rating && <Stars rating={t.rating} tone="gold" className="mt-5 [&_svg]:size-5" />}
-      <p className={cn(t.rating ? "mt-3" : "mt-4 sm:mt-5", "text-[13.5px] leading-relaxed sm:text-[15px] text-ink/80")}>{t.text}</p>
+      <ReviewText text={t.text} className={cn(t.rating ? "mt-3" : "mt-4 sm:mt-5", "text-[13.5px] leading-relaxed sm:text-[15px] text-ink/80")} />
     </article>
   );
 }
