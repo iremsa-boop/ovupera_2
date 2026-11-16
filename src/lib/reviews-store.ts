@@ -10,36 +10,53 @@ export type StoredReview = {
   createdAt: string;
 };
 
+type NewReview = { name?: string; meta?: string; text: string };
+
 export const REVIEWS_TAG = "reviews";
-const KEY = "ovupera:reviews";
 const MAX = 500;
 
 /**
  * Depo seçimi:
- * - Vercel'de Upstash Redis bağlıysa (KV_REST_API_URL / KV_REST_API_TOKEN ya da UPSTASH_REDIS_REST_*) Redis kullanılır.
+ * - REVIEWS_SHEET_URL tanımlıysa yorumlar Google E-Tablolar'da tutulur
+ *   (script: docs/yorumlar-google-apps-script.gs). Tablodan satır silmek yorumu kaldırır.
  * - Yerel geliştirmede (npm run dev) .data/reviews.json dosyası kullanılır.
  * - İkisi de yoksa depo kapalıdır; form yorumu WhatsApp'a yönlendirir.
  */
-const redisUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-const redisToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
-const useRedis = Boolean(redisUrl && redisToken);
-const useFile = !useRedis && process.env.NODE_ENV === "development";
+const sheetUrl = process.env.REVIEWS_SHEET_URL;
+const useSheet = Boolean(sheetUrl);
+const useFile = !useSheet && process.env.NODE_ENV === "development";
 
-export const reviewsStoreEnabled = useRedis || useFile;
+export const reviewsStoreEnabled = useSheet || useFile;
 
-// --- Upstash Redis (REST) ---------------------------------------------------
+// --- Google E-Tablolar (Apps Script web uygulaması) ----------------------------
 
-async function redis<T>(command: (string | number)[], cacheTags?: string[]): Promise<T> {
-  const res = await fetch(redisUrl!, {
+type SheetRow = { createdAt: string; name?: string; meta?: string; text: string };
+
+async function readSheet(): Promise<StoredReview[]> {
+  const res = await fetch(sheetUrl!, { next: { tags: [REVIEWS_TAG], revalidate: 600 } });
+  if (!res.ok) throw new Error(`Sheet ${res.status}`);
+  const json = (await res.json()) as { reviews?: SheetRow[] };
+  return (json.reviews ?? []).map((r, i) => ({
+    id: `${r.createdAt}-${i}`,
+    createdAt: r.createdAt,
+    name: r.name || undefined,
+    meta: r.meta || undefined,
+    text: r.text,
+  }));
+}
+
+async function writeSheet(input: NewReview, ip: string): Promise<"ok" | "rate-limit"> {
+  const res = await fetch(sheetUrl!, {
     method: "POST",
-    headers: { Authorization: `Bearer ${redisToken}`, "Content-Type": "application/json" },
-    body: JSON.stringify(command),
-    ...(cacheTags ? { next: { tags: cacheTags, revalidate: 3600 } } : { cache: "no-store" as const }),
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify({ name: input.name ?? "", city: input.meta ?? "", text: input.text, ip }),
+    cache: "no-store",
   });
-  if (!res.ok) throw new Error(`Redis ${res.status}`);
-  const json = (await res.json()) as { result: T; error?: string };
-  if (json.error) throw new Error(json.error);
-  return json.result;
+  if (!res.ok) throw new Error(`Sheet ${res.status}`);
+  const json = (await res.json()) as { ok?: boolean; error?: string };
+  if (json.error === "rate-limit") return "rate-limit";
+  if (!json.ok) throw new Error(json.error || "Sheet error");
+  return "ok";
 }
 
 // --- Yerel dosya (geliştirme) -------------------------------------------------
@@ -65,32 +82,18 @@ async function writeFile(list: StoredReview[]) {
 export async function listReviews(): Promise<StoredReview[]> {
   if (!reviewsStoreEnabled) return [];
   try {
-    if (useRedis) {
-      const raw = await redis<string[]>(["LRANGE", KEY, 0, MAX - 1], [REVIEWS_TAG]);
-      return raw.map((r) => JSON.parse(r) as StoredReview);
-    }
-    return await readFile();
+    return useSheet ? await readSheet() : await readFile();
   } catch (err) {
     console.error("Yorumlar okunamadı", err);
     return [];
   }
 }
 
-export async function addReview(input: Omit<StoredReview, "id" | "createdAt">): Promise<StoredReview> {
+/** Yorumu kaydeder; tabloda aynı adresten 60 sn içinde ikinci yorum reddedilir */
+export async function addReview(input: NewReview, ip: string): Promise<"ok" | "rate-limit"> {
+  if (useSheet) return writeSheet(input, ip);
   const review: StoredReview = { id: crypto.randomUUID(), createdAt: new Date().toISOString(), ...input };
-  if (useRedis) {
-    await redis(["LPUSH", KEY, JSON.stringify(review)]);
-    await redis(["LTRIM", KEY, 0, MAX - 1]);
-  } else {
-    const list = await readFile();
-    await writeFile([review, ...list].slice(0, MAX));
-  }
-  return review;
-}
-
-/** Aynı adresten art arda gönderimi sınırlar (Redis'te 60 sn'de 1 yorum). Yerelde sınır yok. */
-export async function allowSubmission(ip: string): Promise<boolean> {
-  if (!useRedis) return true;
-  const ok = await redis<string | null>(["SET", `ovupera:review-rate:${ip}`, "1", "EX", 60, "NX"]);
-  return ok === "OK";
+  const list = await readFile();
+  await writeFile([review, ...list].slice(0, MAX));
+  return "ok";
 }

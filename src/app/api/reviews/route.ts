@@ -1,11 +1,11 @@
 import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
-import { addReview, allowSubmission, listReviews, REVIEWS_TAG, reviewsStoreEnabled } from "@/lib/reviews-store";
+import { addReview, listReviews, REVIEWS_TAG, reviewsStoreEnabled } from "@/lib/reviews-store";
 
 const clean = (v: unknown, max: number) =>
   typeof v === "string" ? v.replace(/\s+/g, " ").trim().slice(0, max) : "";
 
-/** Yayındaki ziyaretçi yorumları (yönetim sayfası kullanır) */
+/** Yayındaki ziyaretçi yorumları */
 export async function GET() {
   return NextResponse.json({ enabled: reviewsStoreEnabled, reviews: await listReviews() });
 }
@@ -36,12 +36,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "links" }, { status: 400 });
   }
 
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  if (!(await allowSubmission(ip))) {
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "";
+  let result: "ok" | "rate-limit";
+  try {
+    result = await addReview({ text, name: name || undefined, meta: city || undefined }, ip);
+  } catch (err) {
+    console.error("Yorum kaydedilemedi", err);
+    return NextResponse.json({ error: "store-failed" }, { status: 503 });
+  }
+  if (result === "rate-limit") {
     return NextResponse.json({ error: "rate-limit" }, { status: 429 });
   }
 
-  const review = await addReview({ text, name: name || undefined, meta: city || undefined });
   revalidateTag(REVIEWS_TAG);
-  return NextResponse.json({ ok: true, review }, { status: 201 });
+  return NextResponse.json({ ok: true }, { status: 201 });
 }
